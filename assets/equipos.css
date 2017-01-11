@@ -1,0 +1,234 @@
+.espacioTituloInfo {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	height: auto;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.tituloLiga {
+	width: auto;
+	padding: 5px 0;
+	margin-right: auto;
+	white-space: normal;
+	display: flex;
+	align-items: center;
+}
+
+.tituloLiga>span {
+	font-weight: bold;
+	color: #585858;
+	margin-right: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	line-height: 1.5em;
+	max-height: 3em;
+}
+
+.tituloLiga>img {
+	width: 50px;
+	height: 50px;
+}
+
+.espacioAdmGrupos {
+	width: auto;
+	display: flex;
+	justify-content: center;
+	padding: 5px 0;
+}
+
+.espacioAdmGrupos a {
+	height: auto;
+	width: auto;
+}
+
+.botonAdmGrupos {
+	margin: 0;
+}
+
+.textoBotonAdm {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.lineaDivisoriaTitulo {
+	height: 1px;
+	background-color: #DDDDDD;
+}
+
+.secciones {
+	margin: 10px 0 0 0;
+	width: 100%;
+}
+
+.containerBody {
+	width: 100%;
+}
+
+.tituloLiga img {
+	display: none;
+}
+
+.accordion-toggle {
+	cursor: pointer;
+}
+
+.espacioEquipo {
+	height: 42px;
+}
+
+.espacioEquipoLogo {
+	width: auto;
+	margin: 0;
+	display: flex;
+	justify-content: flex-start;
+	padding-left: 20px;
+	min-width: auto;
+}
+
+.espacioEquipoLogo>img {
+	max-height: 35px;
+	max-width: 35px;
+}
+
+.espacioEquipoNombre {
+	width: 100%;
+	padding-left: 10px;
+	margin-right: auto;
+	margin-left: 0;
+	white-space: normal;
+	display: flex;
+	align-items: center;
+}
+
+.espacioEquipoNombre span {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-height: 1.5em;        /* fallback */
+    max-height: 3em;
+}
+
+.espacioEquipoBotones {
+	width: auto;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 10px;
+}
+
+.botonEditarEquipo {
+    color: white;
+    font-size: 16px;
+    height: 35px;
+    width: 35px;
+    margin: 2px;
+    border-radius: 50%;
+    background-color: #E28B55;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonBorrarEquipo {
+    color: white;
+    font-size: 16px;
+    height: 35px;
+    width: 35px;
+    margin: 2px;
+    border-radius: 50%;
+    background-color: #b74250;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonEquipo {
+	padding: 0 5px;
+}
+
+.botonEquipo a {
+	text-decoration: none;
+}
+
+.espacioJugador {
+	width: 100%;
+	display: flex;
+	height: auto;
+}
+
+.espacioJugadorNombre {
+	width: 35%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding-left: 10px;
+    line-height: 1.5em;
+    overflow: hidden;
+}
+
+.espacioJugadorNumero {
+	width: 35%;
+	margin: 0;
+	padding: 0 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.espacioJugadorPosicion {
+	width: 30%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+
+    .containerBody {
+        margin: 0 35px;
+        max-width: 850px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .espacioTituloInfo {
+        height: 60px;
+    }
+
+    .tituloLiga img {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    .espacioJugadorNombre {
+        width: 100%;
+    }
+
+    .espacioJugadorNumero {
+        width: auto;
+        padding: 0 20px;
+    }
+
+    .espacioJugadorPosicion {
+        width: auto;
+        padding: 0 30px 0 0;
+    }
+
+}

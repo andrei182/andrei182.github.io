@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ligateca</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" media="all" href="assets/application123.css" data-turbolinks-track="true" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,300,100,900' rel='stylesheet' type='text/css'>
+  <script src="assets/application.js" data-turbolinks-track="true"></script>
+  <script src="https://use.fontawesome.com/3e6dfd3a40.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+  <meta name="csrf-param" content="authenticity_token" />
+  <meta name="csrf-token" content="EBV8MaUrONY0528wlwsvbftlLYiMv9uRCRlEKS+2HgYTQT9Vchyr9Gul4Z1Fj+zOEaxfdrKzh+fOPDOUDoC44g==" />
+  <link rel="stylesheet" href="assets/equipos.css">
+</head>
+
+<body>
+
+  <nav class="main_menu navbar-default" role="navigation">
+
+    <div class='espacioMenuPrincipal'>
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#nav-primary">
+          <span class="sr-only">Desplegar navegacion</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand logo"  href="#">
+          <img src="assets/ligateca_logo_naranja.svg" alt="Ligateca logo naranja 20fd4942ccfa99ee0759a98a9f54f505500463ec3b0811ea4a07fc45cfea5b6f" />
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-ex1-collapse" id="nav-primary" style="margin-bottom: 0px">
+
+        <ul class="nav navbar-nav">
+          <li><a class="main_menu_links" href="/league">Mis Ligas</a></li>
+          <li><a class="main_menu_links" href="/league/new">Crear Liga</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right ">
+          <li>
+          <li>
+            <a href='/requests/33/see_new_requests' class='menuLink'>
+              <i class='zmdi zmdi-hc-2x zmdi-notifications-none'></i>
+            </a>
+          </li>
+          </li>
+          <li class="dropdown menuSize">
+            <a href="#" class="dropdown-toggle menuLink" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" >
+              <i class="zmdi zmdi-hc-2x zmdi-account-circle zmdi-hc-fw"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="/player/33/edit_profile">Perfil</a></li>
+              <li><a href="/users/edit">Cambiar contraseña</a></li>
+              <li><a rel="nofollow" data-method="delete" href="/users/sign_out">Salir</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <form class="navbar-form navbar-right" role="search" action="/league/search_result" method="post" id="search_form">
+          <div class="input-group">
+            <input type="text" name="search_key"  class="form-control search_field" placeholder="Buscar... ">
+            <span class="input-group-btn">
+              <button class="btn search_button search_icon" type="button">
+                <span class="glyphicon glyphicon-search lupa"></span>
+              </button>
+            </span>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <nav class="sub_menu navbar-default" role="navigation">
+    <div class='espacioMenuPrincipal  menuLiga'>
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle buttonSubMenu" data-toggle="collapse" data-target="#nav-secondary" aria-expanded="false">
+        <span class="sr-only">Desplegar navegacion</span>
+        <span>Inicio</span>
+        <i class="fa fa-caret-down toc" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-ex1-collapse" id="nav-secondary">
+        <ul class="nav navbar-nav">
+          <li><a class="sub_menu_links" href="/league/liga_andrei">Inicio</a></li>
+          <li><a class="sub_menu_links" href="/league/liga_andrei/teams">Equipos</a></li>
+          <li><a class="sub_menu_links" href="/league/liga_andrei/stats">Estadísticas</a></li>
+          <li><a class="sub_menu_links" href="/league/liga_andrei/standings">Posiciones</a></li>
+          <li>
+            <li class="dropdown ">
+              <a href="#" class="dropdown-toggle sub_menu_links" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              Calendario
+              <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="/league/liga_andrei/match">Fase de Grupos</a></li>
+                <li><a href="/match/liga_andrei/show_playoff_brackets">Eliminatorias</a></li>
+              </ul>
+            </li>
+          </li>
+          <li><a class="sub_menu_links" href="/league/liga_andrei/post">Noticias</a></li>
+          <li><a class="sub_menu_links" href="/league/liga_andrei/album">Fotos</a> </li>
+          <li><a class="sub_menu_links" href="/league/liga_andrei/permission">Permisos</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <div class="bodyContainer">
+
+    <div class="containerBody">
+
+      <div>
+
+        <div class="equipos-grupo shadow secciones">
+          <div class="equipos-tituloGrupo container espacioTituloInfo">
+            <div class="tituloLiga">
+              <img src="http://ligateca.com/assets/league_logo_50.png" alt="League Logo" />
+              <span>Liga Andrei</span>
+            </div>
+            <div class="espacioAdmGrupos">
+              <a id="A" class="btn league_team_setup_groups botonAdmGrupos" role="button" href="/league/liga_andrei/teams_order">
+                <div class="textoBotonAdm">
+                  <span>Administrar grupos</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="lineaDivisoriaTitulo"></div>
+        </div> <!-- Cierra class secciones -->
+
+        <div class="equipos-grupo shadow secciones">
+
+          <div class="equipos-tituloGrupo container">
+             <span><strong>Grupo A</strong></span>
+          </div>
+
+          <div class="lineaDivisoria"></div>
+
+          <!-- EQUIPO 1 -->
+          <div class="equipos-equipo espacioEquipo">
+
+            <!-- LOGO -->
+            <div class="equipos-logo espacioEquipoLogo accordion-toggle " data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                <img class="equipos-logoEquipo" src="http://ligateca.com/assets/league_logo_50.png" alt="League Logo" />
+            </div>
+
+            <!-- NOMBRE -->
+            <div class="equipos-espacioDer row espacioEquipoNombre accordion-toggle " data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+              <span>
+                  Andrei
+              </span>
+            </div>
+
+            <!-- BOTONES -->
+            <div class="espacioEquipoBotones">
+
+              <div class="botonEquipo">
+                <a href="/team/373/edit">
+                  <div class="botonEditarEquipo">
+                    <i class="zmdi zmdi-edit"></i>
+                  </div>
+                </a>
+              </div>
+
+              <div class="botonEquipo">
+                <a data-confirm="Está seguro?" rel="nofollow" data-method="delete" href="/team/373">
+                  <div class="botonBorrarEquipo">
+                    <i class="zmdi zmdi-close"></i>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+
+          </div><!-- Cierra class espacioEquipo -->
+
+          <!-- ACORDEON -->
+          <div id="collapse4" class="panel-collapse collapse">
+
+            <div class="panel-body">
+
+              <!-- JUGADOR 1 -->
+              <div class="league_team_player_row row espacioJugador">
+
+                  <div class="indicator league_team_player_name  col-md-6 espacioJugadorNombre">
+                    <span>Plotnikoff Andrei (C)</span>
+                  </div>
+                  <div class="indicator league_team_player_number col-md-1 espacioJugadorNumero">
+                    20
+                  </div>
+                  <div class="indicator league_team_player_position col-md-5 espacioJugadorPosicion">
+                    Delantero
+                  </div>
+
+              </div>
+
+              <!-- JUGADOR 2 -->
+              <div class="league_team_player_row row espacioJugador">
+
+                  <div class="indicator league_team_player_name  col-md-6 espacioJugadorNombre">
+                    Plotnikoff Adrian
+                  </div>
+                  <div class="indicator league_team_player_number col-md-1 espacioJugadorNumero">
+                    15
+                  </div>
+                  <div class="indicator league_team_player_position col-md-5 espacioJugadorPosicion">
+                    Delantero
+                  </div>
+
+              </div>
+
+            </div>
+
+          </div>
+          <!-- FIN DE ACORDEON -->
+
+          <!-- EQUIPO 2 -->
+          <div class="equipos-equipo espacioEquipo">
+
+            <!-- LOGO -->
+            <div class="equipos-logo espacioEquipoLogo accordion-toggle " data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+              <img class="equipos-logoEquipo" src="http://ligateca.com/assets/league_logo_50.png" alt="League logo 50" />
+            </div>
+
+            <!-- NOMBRE -->
+            <div class="equipos-espacioDer  row espacioEquipoNombre accordion-toggle " data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+              <span>
+                  Team 5
+              </span>
+            </div>
+
+             <!-- BOTONES -->
+            <div class="espacioEquipoBotones">
+
+              <div class="botonEquipo">
+                <a href="/team/377/edit">
+                  <div class="botonEditarEquipo">
+                    <i class="zmdi zmdi-edit"></i>
+                  </div>
+                </a>
+              </div>
+
+              <div class="botonEquipo">
+                <a data-confirm="Está seguro?" rel="nofollow" data-method="delete" href="/team/377">
+                  <div class="botonBorrarEquipo">
+                    <i class="zmdi zmdi-close"></i>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+
+          </div><!-- Cierra class espacioEquipo -->
+
+
+          <!-- ACORDEON -->
+          <div id="collapse5" class="panel-collapse collapse">
+            <div class="panel-body">
+            </div>
+          </div>
+          <!-- FIN DE ACORDEON -->
+
+          <!-- EQUIPO 3 -->
+          <div class="equipos-equipo espacioEquipo">
+
+            <!-- LOGO -->
+            <div class="equipos-logo espacioEquipoLogo accordion-toggle " data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+              <img class="equipos-logoEquipo" src="http://ligateca.com/assets/league_logo_50.png" alt="League logo 50" />
+            </div>
+
+            <!-- NOMBRE -->
+            <div class="equipos-espacioDer  row espacioEquipoNombre">
+              <span>
+                  Team 6
+              </span>
+            </div>
+
+             <!-- BOTONES -->
+            <div class="espacioEquipoBotones">
+
+              <div class="botonEquipo">
+                <a href="/team/378/edit">
+                  <div class="botonEditarEquipo">
+                    <i class="zmdi zmdi-edit"></i>
+                  </div>
+                </a>
+              </div>
+
+              <div class="botonEquipo">
+                <a data-confirm="Está seguro?" rel="nofollow" data-method="delete" href="/team/378">
+                  <div class="botonBorrarEquipo">
+                    <i class="zmdi zmdi-close"></i>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+
+          </div><!-- Cierra class espacioEquipo -->
+
+
+          <!-- ACORDEON -->
+          <div id="collapse5" class="panel-collapse collapse">
+            <div class="panel-body">
+            </div>
+          </div>
+          <!-- FIN DE ACORDEON -->
+
+        </div><!-- Cierra class secciones -->
+
+      </div>
+
+    </div><!-- Cierra class containerBody -->
+
+    <div id="dialog" title="Equipo">
+      <form class="new_match" id="new_match" action="/league" accept-charset="UTF-8" method="post">
+        <input name="utf8" type="hidden" value="&#x2713;" />
+        <input type="hidden" name="authenticity_token" value="elqYbclnE4lI1UEe27Vh9l1rXWKY1wE0D62uacOHvmp5DtsJHlCAqxeXz7MJMaJVt6IvnKbbXULIiNnU4rEYjg==" />
+        <div class="field">
+          <label for="match_Nombre">Nombre</label>
+          <input type="text" name="team_name" id="team_name" value="Equipo" />
+        </div>
+        <div class="field">
+          <label for="match_Grupo">Grupo</label>
+          <input type="text" name="group_name" id="group_name" value="" />
+        </div>
+
+        <div class="field">
+          <button name="button" type="button" id="save_team">Guardar</button>
+          <input type="hidden" name="league_id" id="league_id" value="42" />
+        </div>
+      </form>
+    </div>
+
+  </div><!-- Cierra class bodyContainer -->
+
+
+</body>
+
+</html>
