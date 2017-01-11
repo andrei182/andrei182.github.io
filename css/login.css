@@ -156,6 +156,7 @@ select {
    height: 38px;
    width: 210px;
    color: #c8c8c8;
+   -moz-appearance: none;
 }
 
 .checkboxLogin {
