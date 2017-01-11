@@ -135,6 +135,7 @@ select {
 }
 
 .inputInfoField>input {
+	background: transparent;
 	width: 213px;
 	border: 1px solid #ccc;
 	border-left: none;
