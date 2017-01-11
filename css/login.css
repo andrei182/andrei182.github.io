@@ -128,6 +128,10 @@ select {
 
 .inputInfoField {
 	display: flex;
+	border: 1px solid #ccc;
+	border-left: none;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
 .inputInfoField>input {
