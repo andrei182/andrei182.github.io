@@ -1,0 +1,146 @@
+/** {
+    border: 1px solid red !important;
+}*/
+
+/*Esto es para que el width y height aplique al valor
+total del contenido mas el padding y el border*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*Para que las imagenes no se agranden y pierdan calidad*/
+img,
+embed,
+object,
+video {
+    max-width: 100%;
+}
+
+body {
+    background-color: #142027;
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    margin-bottom: 50px;
+    overflow-y: scroll;
+}
+
+a {
+    text-decoration: none;
+}
+
+select {
+    border-radius: 0;
+}
+
+/*Esto aplica a todo el contenido de la pagina*/
+.container2 {
+    flex-wrap: wrap;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.shadow {
+    -webkit-box-shadow: 0px 2px 4px 0px rgba(151,151,151,0.5);
+    -moz-box-shadow: 0px 2px 4px 0px rgba(151,151,151,0.5);
+    box-shadow: 0px 2px 4px 0px rgba(151,151,151,0.5);
+}
+
+.franjaSuperior {
+    width: 100%;
+    background-color: #1b2931;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.botonAcceder {
+    padding: 7px 10px;
+    color: white;
+    background-color: #e28b55;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 25px 10px 0;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+.espacioAzul {
+    width: 100%;
+    background-color: #2F4858;
+    background: #2F4858; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#2F4858 #1b2931); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#2F4858, #1b2931); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#2F4858, #1b2931); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#2f4858, #1b2931); /* Standard syntax (must be last) */
+}
+
+.logoCompleto {
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+}
+
+.textoPresentacion {
+    color: white;
+    font-size: 22px;
+    margin: 25px auto;
+    display: flex;
+    justify-content: center;
+    max-width: 300px;
+    font-family: 'Exo', sans-serif;
+    text-align: center;
+
+}
+
+.separador {
+    width: 5px;
+}
+
+.textoRegistrarse {
+    color: #dadada;
+    font-size: 14px;
+    margin: 25px auto;
+    display: flex;
+    justify-content: center;
+    max-width: 300px;
+    font-family: 'Exo', sans-serif;
+    text-align: center;
+}
+
+.textoRegistrarse a {
+    color: #84ffbd;
+}
+
+.franjaInferior {
+    width: 100%;
+    background-color: #142027;
+    display: flex;
+    justify-content: center;
+}
+
+.beneficios {
+list-style: none;
+}
+
+
+.beneficios li {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+.beneficios span {
+    padding-left: 10px;
+    color: white;
+    font-size: 14px;
+}

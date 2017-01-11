@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ligateca</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+        <link href="css/login.css" rel="stylesheet">
+    </head>
+
+  <body>
+    <div class="container2">
+
+<!-- RIBBON CON LOGO -->
+      <div class="ribbonArriba">
+          <img src="images/logoCompleto.png" id="logoCompleto" alt="Logo de Ligateca">
+      </div>
+<!-- FIN RIBBON CON LOGO -->
+
+<!-- ESPACIO PARA LOGIN -->
+      
+      <!-- TITULO -->
+      <div class="espacioLogin shadow">
+        <div class="espacioTexto">
+          <span>Iniciar Sesión</span>
+        </div>
+        <div class="lineaDivisoria"></div>
+
+
+        <!-- ESPACIO CON INFORMACIÓN -->
+          <div class="espacioFields">
+
+            <div class="inputInfoToc">
+              <div class="inputInfoIcono">
+                <i class="zmdi zmdi-email"></i>
+              </div>
+              <div class="inputInfoField">
+                <input class="form-control" placeholder="Email" data-toggle="tooltip" title="" type="email" value="" name="user[email]" id="user_email">
+              </div>
+            </div>
+
+            <div class="inputInfoToc">
+              <div class="inputInfoIcono">
+                <i class="zmdi zmdi-star"></i>
+              </div>
+              <div class="inputInfoField">
+                <input class="form-control" placeholder="Password" data-toggle="tooltip" title="" type="password" value="" name="user[password]" id="user_password">
+              </div>
+            </div>
+
+            <div class="checkboxLogin">
+              <input name="user[remember_me]" type="hidden" value="0"><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me">
+              <span>Recordarme</span>
+              <div class="separador"></div>
+              <a href="/users/password/new"><span class="linkLogin">Olvidó su contraseña?</span></a>
+            </div>
+
+            <div class="separadorVertical"></div>
+            
+            <input type="submit" name="commit" value="Acceder" class="botonAcceder">
+            
+            <div class="opcionRegistro">
+              <span>No es miembro?</span>
+              <a href="/users/sign_up"><span class="linkLogin">Regístrese</span></a>
+            </div>
+
+            <div class="redesSociales">
+              <a href="/users/auth/google_oauth2">
+                <div class="botonGoogle">
+                  <i class="zmdi zmdi-google"></i>
+                </div>
+              </a>
+              <div class="separador"></div>
+              <a href="/users/auth/facebook">
+                <div class="botonFacebook">
+                  <i class="zmdi zmdi-facebook"></i>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        
+
+      </div>
+<!-- FIN ESPACIO PARA LOGIN -->
+
+
+
+    </div>
+  </body>
+  </html>

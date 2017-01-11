@@ -1,0 +1,257 @@
+/** {
+    border: 1px solid red !important;
+}*/
+
+/*Esto es para que el width y height aplique al valor
+total del contenido mas el padding y el border*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*Para que las imagenes no se agranden y pierdan calidad*/
+img,
+embed,
+object,
+video {
+    max-width: 100%;
+}
+
+body {
+    background-color: #e5e5e5;
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding-bottom: 50px;
+    overflow-y: scroll;
+}
+
+a {
+    text-decoration: none;
+}
+
+select {
+    border-radius: 0;
+}
+
+/*Esto aplica a todo el contenido de la pagina*/
+.container2 {
+    flex-wrap: wrap;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.shadow {
+    -webkit-box-shadow: 0px 2px 4px 0px rgba(151,151,151,0.5);
+    -moz-box-shadow: 0px 2px 4px 0px rgba(151,151,151,0.5);
+    box-shadow: 0px 2px 4px 0px rgba(151,151,151,0.5);
+}
+
+.lineaDivisoria {
+    height: 5px;
+    background-color: #365e78;
+}
+
+#logoCompleto {
+	width: 125px;
+	height: 88px;
+	margin-top: 20px;
+}
+
+.ribbonArriba {
+	width: 100%;
+	background-color: #2F4858;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+}
+
+.espacioLogin {
+	margin: 35px 0 0 0;
+	border-radius: 0;
+	background-color: white;
+	width: 100%;
+	max-width: 450px;
+}
+
+.espacioTexto {
+	height: 40px;
+    color: black;
+    font-size: 18px;
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputInfo {
+	display: table;
+	margin-left: 10px;
+}
+.form-control:focus {
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(102,175,233,0.6);
+}
+
+.inputInfoToc {
+	margin: 5px 0;
+	display: flex;
+}
+
+.espacioFields {
+	display: flex;
+	margin: 20px 0;
+	flex-direction: column;
+	align-items: center;
+}
+
+.inputInfoIcono {
+	background-color: #eee;
+	height: 40px;
+	width: 40px;
+	border: 1px solid #ccc;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	color: #555555;
+}
+
+.inputInfoField {
+	display: flex;
+}
+
+.inputInfoField>input {
+	width: 213px;
+	border: 1px solid #ccc;
+	border-left: none;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding-left: 10px;
+}
+
+.inputInfoFieldSelect {
+    border: 1px solid #ccc;
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-left: 2px;
+}
+
+.inputInfoFieldSelect select {
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   height: 38px;
+   width: 210px;
+   color: #c8c8c8;
+}
+
+.checkboxLogin {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: black;
+	float: left;
+	font-size: 12px;
+}
+
+.linkLogin {
+	color: #337ab7;
+}
+
+.separador {
+	width: 40px;
+}
+
+.separadorVertical {
+	height: 15px;
+}
+
+.botonAcceder {
+	cursor: pointer;
+	border: 0;
+	width: 200px;
+	background-color: #58b957;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 8px 0;
+	border-radius: 5px;
+}
+
+.opcionRegistro {
+	margin-top: 5px;
+}
+
+.opcionRegistro>span,
+.opcionRegistro>a>span {
+	font-size: 12px;
+}
+
+.redesSociales {
+	display: flex;
+	justify-content: center;
+	margin-top: 15px;
+	width: 100%;
+}
+
+.botonGoogle {
+	background-color: #d94d39;
+	color: white;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	padding-top: 17px;
+	border-radius: 50%;
+}
+
+.botonFacebook {
+	background-color: #225b99;
+	color: white;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	padding-top: 17px;
+	border-radius: 50%;
+}
+
+.forgotTexto {
+	text-align: center;
+	margin-top: 10px;
+	font-size: 12px;
+    padding: 0 25px;
+}
+
+.regresar {
+	font-size: 12px;
+	padding-left: 10px;
+}
+
+::-webkit-input-placeholder { /* Chrome */
+  color: #999;
+  font-size: 14px;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #999;
+  font-size: 14px;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #999;
+  opacity: 1;
+  font-size: 14px;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: #999;
+  opacity: 1;
+  font-size: 14px;
+}
