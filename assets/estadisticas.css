@@ -266,7 +266,7 @@
 }
 
 .inputInfoFieldSelect {
-    border: 1px solid #404040;
+    border: 1px solid #bfbfbf;
     border-radius: 5px;
 }
 
@@ -276,7 +276,8 @@
    font-size: 14px;
    height: 30px;
    width: 150px;
-   color: #404040;
+   color: #585858;
+   font-weight: bold;
    -moz-appearance: none;
 }
 
