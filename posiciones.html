@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
   <meta name="csrf-param" content="authenticity_token" />
   <meta name="csrf-token" content="EBV8MaUrONY0528wlwsvbftlLYiMv9uRCRlEKS+2HgYTQT9Vchyr9Gul4Z1Fj+zOEaxfdrKzh+fOPDOUDoC44g==" />
-  <link rel="stylesheet" href="assets/estadisticas.css">
+  <link rel="stylesheet" href="assets/posiciones.css">
 </head>
 
 <body>
@@ -120,8 +120,6 @@
 
     <div class="containerBody">
 
-      <div>
-
         <div class="equipos-grupo shadow secciones">
           <div class="equipos-tituloGrupo container espacioTituloInfo">
             <div class="tituloLiga">
@@ -137,187 +135,255 @@
           <div class="equipos-tituloGrupo container">
 
             <div class="espacioTituloSeccion">
-              <span><strong>Estadísticas</strong></span>
-            </div>
-
-            <div class="inputInfoFieldSelect">
-              <select name="user[country_id]" id="user_country_id">
-                <option value="1">Goles</option>
-                <option value="2">Asistencias</option>
-                <option value="3">Tarjetas</option>
-              </select>
+              <span><strong>Tabla de Posiciones</strong></span>
             </div>
 
           </div>
 
           <div class="lineaDivisoria"></div>
 
-          <!-- TITULOS GOLES -->
-          <div class="espacioTitulosGoles">
-            <div class="espacioTituloJugador">
-              <span>Jugador</span>
-            </div>
-            <div class="espacioTituloEquipo">
+          <!-- TITULOS -->
+          <div class="espacioTitulosPosiciones">
+
+            <div class="posicionesEquipoTitulo">
               <span>Equipo</span>
             </div>
-            <div class="espacioTituloStat">
-              <span>Goles</span>
+
+            <div class="posicionesStatTitulo">
+              <span>PJ</span>
             </div>
+            <div class="posicionesStatTitulo opcionEsconder">
+              <span>G</span>
+            </div>
+            <div class="posicionesStatTitulo opcionEsconder">
+              <span>E</span>
+            </div>
+            <div class="posicionesStatTitulo opcionEsconder">
+              <span>P</span>
+            </div>
+            <div class="posicionesStatTitulo opcionEsconder">
+              <span>GF</span>
+            </div>
+            <div class="posicionesStatTitulo opcionEsconder">
+              <span>GC</span>
+            </div>
+            <div class="posicionesStatTitulo">
+              <span>DIF</span>
+            </div>
+            <div class="posicionesStatTitulo">
+              <span>PTS</span>
+            </div>
+
           </div>
 
           <!-- ESPACIO DE JUGADORES -->
-          <div class="espacioJugadores">
+          <div class="espacioEquiposPosiciones">
             <div class="espacioRango">
               <span>1</span>
             </div>
-            <div class="espacioNombreJugador">
-              <span>Andrei Plotnikoff</span>
-            </div>
-            <div class="espacioEquipoStat">
+
+            <div class="nombreEquipoPosiciones">
               <span>Fighting Romanes</span>
             </div>
-            <div class="espacioJugadorStat">
+
+            <div class="posicionesStatLinea">
               <span>10</span>
             </div>
+            <div class="posicionesStatLinea opcionEsconder">
+              <span>10</span>
+            </div>
+            <div class="posicionesStatLinea opcionEsconder">
+              <span>10</span>
+            </div>
+            <div class="posicionesStatLinea opcionEsconder">
+              <span>10</span>
+            </div>
+            <div class="posicionesStatLinea opcionEsconder">
+              <span>10</span>
+            </div>
+            <div class="posicionesStatLinea opcionEsconder">
+              <span>10</span>
+            </div>
+            <div class="posicionesStatLinea">
+              <span>10</span>
+            </div>
+            <div class="posicionesStatLinea">
+              <span>10</span>
+            </div>
+            
           </div>
 
-          <div class="espacioJugadores">
+          <div class="espacioEquiposPosiciones">
             <div class="espacioRango">
               <span>10</span>
             </div>
-            <div class="espacioNombreJugador">
-              <span>Roman Plotnikoff</span>
+            <div class="nombreEquipoPosiciones">
+              <span>DM Blue Romanes</span>
             </div>
-            <div class="espacioEquipoStat">
-              <span>Inmortales United</span>
+
+            <div class="posicionesStatLinea">
+              <span>100</span>
             </div>
-            <div class="espacioJugadorStat">
-              <span>1</span>
+            <div class="posicionesStatLinea opcionEsconder">
+              <span>100</span>
             </div>
+            <div class="posicionesStatLinea opcionEsconder">
+              <span>100</span>
+            </div>
+            <div class="posicionesStatLinea opcionEsconder">
+              <span>100</span>
+            </div>
+            <div class="posicionesStatLinea opcionEsconder">
+              <span>100</span>
+            </div>
+            <div class="posicionesStatLinea opcionEsconder">
+              <span>100</span>
+            </div>
+            <div class="posicionesStatLinea">
+              <span>100</span>
+            </div>
+            <div class="posicionesStatLinea">
+              <span>100</span>
+            </div>
+           
           </div>
-
-
 
         </div><!-- Cierra class secciones -->
 
-          <div class="lineaDivisoria temporalPrueba"></div>
+        <div class="equipos-grupo shadow secciones">
 
-          <!-- TITULOS ASISTENCIAS -->
-          <div class="espacioTitulosGoles">
-            <div class="espacioTituloJugador">
-              <span>Jugador</span>
+          <div class="equipos-tituloGrupo container">
+
+            <div class="espacioTituloSeccion">
+              <span><strong>Tabla de Posiciones</strong></span>
             </div>
-            <div class="espacioTituloEquipo">
+
+          </div>
+
+          <div class="lineaDivisoria"></div>
+
+          <!-- TITULOS -->
+          <div class="espacioTitulosPosiciones">
+
+            <div class="posicionesEquipoTitulo">
               <span>Equipo</span>
             </div>
-            <div class="espacioTituloStat">
-              <span>Asist.</span>
+
+            <div class="posicionesStatTitulo">
+              <span>PJ</span>
             </div>
+            <div class="posicionesStatTitulo opcionEsconder">
+              <span>G</span>
+            </div>
+            <div class="posicionesStatTitulo opcionEsconder">
+              <span>E</span>
+            </div>
+            <div class="posicionesStatTitulo opcionEsconder">
+              <span>P</span>
+            </div>
+            <div class="posicionesStatTitulo opcionEsconder">
+              <span>GF</span>
+            </div>
+            <div class="posicionesStatTitulo opcionEsconder">
+              <span>GC</span>
+            </div>
+            <div class="posicionesStatTitulo">
+              <span>DIF</span>
+            </div>
+            <div class="posicionesStatTitulo">
+              <span>PTS</span>
+            </div>
+
           </div>
 
           <!-- ESPACIO DE JUGADORES -->
-          <div class="espacioJugadores">
+          <div class="espacioEquiposPosiciones">
             <div class="espacioRango">
               <span>1</span>
             </div>
-            <div class="espacioNombreJugador">
-              <span>Andrei Plotnikoff</span>
-            </div>
-            <div class="espacioEquipoStat">
+
+            <div class="nombreEquipoPosiciones">
               <span>Fighting Romanes</span>
             </div>
-            <div class="espacioJugadorStat">
+
+            <div class="posicionesStatLinea">
               <span>10</span>
             </div>
+            <div class="posicionesStatLinea opcionEsconder">
+              <span>10</span>
+            </div>
+            <div class="posicionesStatLinea opcionEsconder">
+              <span>10</span>
+            </div>
+            <div class="posicionesStatLinea opcionEsconder">
+              <span>10</span>
+            </div>
+            <div class="posicionesStatLinea opcionEsconder">
+              <span>10</span>
+            </div>
+            <div class="posicionesStatLinea opcionEsconder">
+              <span>10</span>
+            </div>
+            <div class="posicionesStatLinea">
+              <span>10</span>
+            </div>
+            <div class="posicionesStatLinea">
+              <span>10</span>
+            </div>
+            
           </div>
 
-          <div class="espacioJugadores">
+          <div class="espacioEquiposPosiciones">
+
             <div class="espacioRango">
               <span>10</span>
             </div>
-            <div class="espacioNombreJugador">
-              <span>Roman Plotnikoff</span>
+
+            <div class="nombreEquipoPosiciones">
+              <span>DM Blue Romanes</span>
             </div>
-            <div class="espacioEquipoStat">
-              <span>Inmortales United</span>
+
+            <div class="posicionesStatLinea">
+              <span>100</span>
             </div>
-            <div class="espacioJugadorStat">
-              <span>1</span>
+            <div class="posicionesStatLinea opcionEsconder">
+              <span>100</span>
             </div>
+            <div class="posicionesStatLinea opcionEsconder">
+              <span>100</span>
+            </div>
+            <div class="posicionesStatLinea opcionEsconder">
+              <span>100</span>
+            </div>
+            <div class="posicionesStatLinea opcionEsconder">
+              <span>100</span>
+            </div>
+            <div class="posicionesStatLinea opcionEsconder">
+              <span>100</span>
+            </div>
+            <div class="posicionesStatLinea">
+              <span>100</span>
+            </div>
+            <div class="posicionesStatLinea">
+              <span>100</span>
+            </div>
+           
           </div>
 
-          <div class="lineaDivisoria temporalPrueba"></div>
-
-          <!-- TITULOS TARJETAS -->
-          <div class="espacioTitulosGoles">
-            <div class="espacioTituloJugador">
-              <span>Jugador</span>
-            </div>
-            <div class="espacioTituloEquipo">
-              <span>Equipo</span>
-            </div>
-            <div class="espacioTituloStatTarjetas">
-              <span>TA</span>
-              <span>TR</span>
-            </div>
+          <div class="leyendasPosiciones">
+            <span>PJ: Partidos Jugados</span>
+            <span class="opcionEsconder">G: Ganados</span>
+            <span class="opcionEsconder">E: Empatados</span>
+            <span class="opcionEsconder">P: Perdidos</span>
+            <span class="opcionEsconder">GF: Goles a Favor</span>
+            <span class="opcionEsconder">GC: Goles en Contra</span>
+            <span>DIF: Diferencia de Goles</span>
+            <span>PTS: Puntos</span>
           </div>
 
-          <!-- ESPACIO DE JUGADORES -->
-          <div class="espacioJugadores">
-            <div class="espacioRango">
-              <span>1</span>
-            </div>
-            <div class="espacioNombreJugador">
-              <span>Andrei Plotnikoff</span>
-            </div>
-            <div class="espacioEquipoStat">
-              <span>Fighting Romanes</span>
-            </div>
-            <div class="espacioJugadorStatTarjetas">
-              <span>10</span>
-              <span>10</span>
-            </div>
-          </div>
-
-          <div class="espacioJugadores">
-            <div class="espacioRango">
-              <span>10</span>
-            </div>
-            <div class="espacioNombreJugador">
-              <span>Roman Plotnikoff</span>
-            </div>
-            <div class="espacioEquipoStat">
-              <span>Inmortales United</span>
-            </div>
-            <div class="espacioJugadorStatTarjetas">
-              <span>1</span>
-              <span>1</span>
-            </div>
-          </div>
-
-      </div>
+        </div><!-- Cierra class secciones -->
 
     </div><!-- Cierra class containerBody -->
-
-    <div id="dialog" title="Equipo">
-      <form class="new_match" id="new_match" action="/league" accept-charset="UTF-8" method="post">
-        <input name="utf8" type="hidden" value="&#x2713;" />
-        <input type="hidden" name="authenticity_token" value="elqYbclnE4lI1UEe27Vh9l1rXWKY1wE0D62uacOHvmp5DtsJHlCAqxeXz7MJMaJVt6IvnKbbXULIiNnU4rEYjg==" />
-        <div class="field">
-          <label for="match_Nombre">Nombre</label>
-          <input type="text" name="team_name" id="team_name" value="Equipo" />
-        </div>
-        <div class="field">
-          <label for="match_Grupo">Grupo</label>
-          <input type="text" name="group_name" id="group_name" value="" />
-        </div>
-
-        <div class="field">
-          <button name="button" type="button" id="save_team">Guardar</button>
-          <input type="hidden" name="league_id" id="league_id" value="42" />
-        </div>
-      </form>
-    </div>
 
   </div><!-- Cierra class bodyContainer -->
 
