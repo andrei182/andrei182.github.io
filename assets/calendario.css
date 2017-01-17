@@ -1,0 +1,279 @@
+
+.espacioTituloInfo {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	height: auto;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.tituloLiga {
+	width: auto;
+	padding: 5px 0;
+	margin-right: auto;
+	white-space: normal;
+	display: flex;
+	align-items: center;
+}
+
+.tituloLiga>span {
+	font-weight: bold;
+	color: #585858;
+	margin-right: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	line-height: 1.5em;
+	max-height: 3em;
+}
+
+.tituloLiga>img {
+	width: 50px;
+	height: 50px;
+}
+
+.lineaDivisoriaTitulo {
+	height: 1px;
+	background-color: #DDDDDD;
+}
+
+.secciones {
+	margin: 10px 0 0 0;
+	width: 100%;
+}
+
+.containerBody {
+	width: 100%;
+}
+
+.tituloLiga img {
+	display: none;
+}
+
+.espacioTituloSeccion {
+	margin-right: auto;
+}
+
+.espacioTituloGrupo {
+	width: 100%;
+	background-color: #f7f7f7;
+	border-bottom: 1px solid #DDDDDD;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 1.3em;
+	height: 2.6em;
+}
+
+.espacioPartido {
+	width: 100%;
+	background-color: white;
+	border-bottom: 1px solid #DDDDDD;
+	display: flex;
+	align-items: center;
+	font-size: 12px;
+	line-height: 1.75em;
+	height: 3.5em;
+}
+
+.espacioFechaCal {
+	width: 50px;
+	min-width: 50px;
+	margin-left: 25px;
+	font-size: 10px;
+	text-align: center;
+	line-height: 1.1em;
+}
+
+.espacioEquiposCal {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.espacioEquipo1 {
+	width: calc(50% - 20px);
+	padding-right: 10px;
+	display: flex;
+	justify-content: flex-end;
+	text-align: right;
+}
+
+.espacioEquipo2 {
+	width: calc(50% - 20px);
+	padding-left: 10px;
+	display: flex;
+	justify-content: flex-start;
+	text-align: left;
+}
+
+.espacioResultado {
+	width: 40px;
+	min-width: 40px;
+	text-align: center;
+}
+
+.espacioBotonesCal {
+	width: 108px;
+	min-width: 108px;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 10px;
+}
+
+.botonEditarResultado {
+    color: white;
+    font-size: 16px;
+    height: 35px;
+    width: 35px;
+    margin: 2px;
+    border-radius: 50%;
+    background-color: #E28B55;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonInfoPartido {
+    color: white;
+    font-size: 16px;
+    height: 35px;
+    width: 35px;
+    margin: 2px;
+    border-radius: 50%;
+    background-color: #58b957;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonEquipo {
+	padding: 0 5px;
+}
+
+.inputInfoFieldSelect {
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+}
+
+.inputInfoFieldSelect select {
+   background: rgba(0, 0, 0, 0.005);
+   border: none;
+   font-size: 14px;
+   height: 30px;
+   width: 150px;
+   color: #585858;
+   font-weight: bold;
+   -moz-appearance: none;
+}
+
+@media screen and (min-width: 768px) {
+
+    .containerBody {
+        margin: 0 35px;
+        max-width: 850px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .espacioTituloInfo {
+        height: 60px;
+    }
+
+    .tituloLiga img {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+	.espacioFechaCal {
+		margin-left: 10px;
+	}
+
+	.espacioEquiposCal {
+		font-size: 10px;
+		min-width: 155px;
+	}
+
+	.espacioEquipo1 {
+		width: calc(50% - 17.5px);
+		padding-right: 5px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.espacioEquipo2 {
+		width: calc(50% - 17.5px);
+		padding-left: 5px;
+	}
+
+	.espacioResultado {
+		width: 35px;
+		min-width: 35px;
+	}
+
+    .espacioJugadorNombre {
+        width: 100%;
+    }
+
+    .espacioJugadorNumero {
+        width: auto;
+        padding: 0 20px;
+    }
+
+    .espacioJugadorPosicion {
+        width: auto;
+        padding: 0 30px 0 0;
+    }
+
+    .espacioBotonesCal {
+		width: 85px;
+		min-width: 85px;
+		padding-right: 5px;
+	}
+
+	.botonEquipo {
+		padding: 0;
+	}
+
+}
+
+@media screen and (max-width: 400px) {
+
+	.espacioFechaCal {
+		margin-left: 0;
+	}
+
+	.espacioBotonesCal {
+		width: 75px;
+		min-width: 75px;
+	}
+
+	.botonEditarResultado {
+	    font-size: 16px;
+	    height: 30px;
+	    width: 30px;
+	    margin: 2px;
+	    
+	}
+
+	.botonInfoPartido {
+	    font-size: 16px;
+	    height: 30px;
+	    width: 30px;
+	    margin: 2px;
+	   
+	}
+
+}

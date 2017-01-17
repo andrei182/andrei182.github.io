@@ -164,28 +164,27 @@
 }
 
 .espacioJugadorNombre {
-	width: 35%;
-	margin: 0;
-	padding: 0;
+	width: 50%;
+	margin: 0 auto 0 0;
+	padding: 0 0 0 10px;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	padding-left: 10px;
     line-height: 1.5em;
     overflow: hidden;
 }
 
 .espacioJugadorNumero {
-	width: 35%;
+	min-width: 55px;
 	margin: 0;
-	padding: 0 10px;
+	padding: 0 0 0 20px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .espacioJugadorPosicion {
-	width: 30%;
+	width: 50%;
 	margin: 0;
 	padding: 0;
 	display: flex;
@@ -217,13 +216,17 @@
 
 @media screen and (max-width: 550px) {
 
+	.espacioJugador {
+		font-size: 12px;
+	}
+
+	.espacioJugadorNumero {
+		min-width: 30px;
+		padding: 0 0 0 10px;
+	}
+
     .espacioJugadorNombre {
         width: 100%;
-    }
-
-    .espacioJugadorNumero {
-        width: auto;
-        padding: 0 20px;
     }
 
     .espacioJugadorPosicion {
