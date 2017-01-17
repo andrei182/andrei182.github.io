@@ -35,6 +35,28 @@
 	height: 50px;
 }
 
+.espacioAdmGrupos {
+	width: auto;
+	display: flex;
+	justify-content: center;
+	padding: 5px 0;
+}
+
+.espacioAdmGrupos a {
+	height: auto;
+	width: auto;
+}
+
+.botonAdmGrupos {
+	margin: 0;
+}
+
+.textoBotonAdm {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .lineaDivisoriaTitulo {
 	height: 1px;
 	background-color: #DDDDDD;
@@ -160,6 +182,7 @@
 .inputInfoFieldSelect {
     border: 1px solid #bfbfbf;
     border-radius: 5px;
+    padding-left: 0;
 }
 
 .inputInfoFieldSelect select {
