@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
   <meta name="csrf-param" content="authenticity_token" />
   <meta name="csrf-token" content="NhzcfNRuQ0wp+47oI4zB/lMl+pfXhMrJpPKbK/5Eyeb/tFNfjgDNTXTPxHNJMj5PWTF/dZAx5HFvwK3YVn56kg==" />
-  <link rel="stylesheet" href="assets/calendario.css">
+  <link rel="stylesheet" href="assets/calendario3.css">
 </head>
 
 <body class="mainbody">
@@ -165,14 +165,14 @@
               <span>10:30 pm</span>
             </div>
 
-            <div class="espacioEquiposCal">
+            <div class="espacioEquiposCal accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
               <div class="espacioEquipo1">
                 <span>Fighting Romanes</span>
               </div>
 
-              <div class="espacioResultado">
-                <span>10 - 10</span>
-              </div>
+              <div class="primerResultado"><span>10</span></div>
+              <div class="separadorGuion"><span>-</span></div>
+              <div class="segundoResultado"><span>20</span></div>
 
               <div class="espacioEquipo2">
                 <span>Inmortales United</span>
@@ -180,13 +180,7 @@
             </div>
 
             <div class="espacioBotonesCal">
-              <div class="botonEquipo">
-                <a href="#">
-                  <div class="botonInfoPartido">
-                    <i class="fa fa-info"></i>
-                  </div>
-                </a>
-              </div>
+              
               <div class="botonEquipo">
                 <a href="#">
                   <div class="botonEditarResultado">
@@ -197,6 +191,58 @@
             </div>
 
           </div>
+
+          <!-- ACORDEON -->
+          <div id="collapse4" class="panel-collapse collapse">
+
+            <div class="panel-body">
+
+              <!-- JUGADOR 1 -->
+              <div class="espacioAcordeonStats">
+
+                  <div class="statJugadorEquipo1">
+                    <span>Andrei Plotnikoff</span>
+                    <i class="fa fa-futbol-o" aria-hidden="true"></i>
+                    <i class="fa fa-futbol-o" aria-hidden="true"></i>
+                    <i class="fa fa-futbol-o" aria-hidden="true"></i>
+                    <i class="fa fa-futbol-o" aria-hidden="true"></i>
+                    <div class="tarjetaAmarilla"></div>
+                    <div class="tarjetaAmarilla"></div>
+                    <div class="tarjetaRoja"></div>
+                  </div>
+         
+              </div>
+
+              <!-- JUGADOR 2 -->
+              <div class="espacioAcordeonStats">
+
+                  <div class="statJugadorEquipo1">
+                    <span>Adrian Plotnikoff</span>
+                    <i class="fa fa-futbol-o" aria-hidden="true"></i>
+                    <i class="fa fa-futbol-o" aria-hidden="true"></i>
+                    <i class="fa fa-futbol-o" aria-hidden="true"></i>
+                    <div class="tarjetaRoja"></div>
+                  </div>
+         
+              </div>
+
+              <!-- JUGADOR 3 -->
+              <div class="espacioAcordeonStatsEquipo2">
+
+                  <div class="statJugadorEquipo2">
+                    <i class="fa fa-futbol-o" aria-hidden="true"></i>
+                    <i class="fa fa-futbol-o" aria-hidden="true"></i>
+                    <i class="fa fa-futbol-o" aria-hidden="true"></i>
+                    <div class="tarjetaRoja"></div>
+                    <span>Valeria Torrazza</span>
+                  </div>
+         
+              </div>
+
+            </div>
+
+          </div>
+          <!-- FIN DE ACORDEON -->
 
           <!-- ESPACIO PARTIDO 2 -->
           <div class="espacioPartido">
@@ -211,23 +257,17 @@
                 <span>Fighting Sebastianes</span>
               </div>
 
-              <div class="espacioResultado">
-                <span>1 - 10</span>
-              </div>
+              <div class="primerResultado"><span>5</span></div>
+              <div class="separadorGuion"><span>-</span></div>
+              <div class="segundoResultado"><span>2</span></div>
 
               <div class="espacioEquipo2">
-                <span>FK Rubin Roman</span>
+                <span>Deportivo Alhueso</span>
               </div>
             </div>
 
             <div class="espacioBotonesCal">
-              <div class="botonEquipo">
-                <a href="#">
-                  <div class="botonInfoPartido">
-                    <i class="fa fa-info"></i>
-                  </div>
-                </a>
-              </div>
+             
               <div class="botonEquipo">
                 <a href="#">
                   <div class="botonEditarResultado">

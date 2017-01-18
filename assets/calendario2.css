@@ -113,33 +113,25 @@
 	line-height: 1.1em;
 }
 
+table, th, td {
+   /* border: 1px solid red;
+    border-collapse: collapse;*/
+    font-weight: normal;
+}
+
 .espacioEquiposCal {
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    width: calc(100% - 183px);
+    line-height: 1.75em;
 }
 
-.espacioEquipo1 {
-	width: calc(50% - 20px);
-	padding-right: 10px;
-	display: flex;
-	justify-content: flex-end;
-	text-align: right;
-}
-
-.espacioEquipo2 {
-	width: calc(50% - 20px);
-	padding-left: 10px;
-	display: flex;
-	justify-content: flex-start;
-	text-align: left;
+.equipoNombre {
+    padding-left: 25px;
+    width: auto;
 }
 
 .espacioResultado {
-	width: 40px;
-	min-width: 40px;
-	text-align: center;
+    text-align: center;
+    width: 100px;
 }
 
 .espacioBotonesCal {
@@ -220,85 +212,4 @@
 
 }
 
-@media screen and (max-width: 550px) {
 
-	.espacioFechaCal {
-		margin-left: 10px;
-	}
-
-	.espacioEquiposCal {
-		font-size: 10px;
-		min-width: 155px;
-	}
-
-	.espacioEquipo1 {
-		width: calc(50% - 17.5px);
-		padding-right: 5px;
-		overflow: hidden;
-		text-overflow: ellipsis;
-	}
-
-	.espacioEquipo2 {
-		width: calc(50% - 17.5px);
-		padding-left: 5px;
-	}
-
-	.espacioResultado {
-		width: 35px;
-		min-width: 35px;
-	}
-
-    .espacioJugadorNombre {
-        width: 100%;
-    }
-
-    .espacioJugadorNumero {
-        width: auto;
-        padding: 0 20px;
-    }
-
-    .espacioJugadorPosicion {
-        width: auto;
-        padding: 0 30px 0 0;
-    }
-
-    .espacioBotonesCal {
-		width: 85px;
-		min-width: 85px;
-		padding-right: 5px;
-	}
-
-	.botonEquipo {
-		padding: 0;
-	}
-
-}
-
-@media screen and (max-width: 400px) {
-
-	.espacioFechaCal {
-		margin-left: 0;
-	}
-
-	.espacioBotonesCal {
-		width: 75px;
-		min-width: 75px;
-	}
-
-	.botonEditarResultado {
-	    font-size: 16px;
-	    height: 30px;
-	    width: 30px;
-	    margin: 2px;
-
-	}
-
-	.botonInfoPartido {
-	    font-size: 16px;
-	    height: 30px;
-	    width: 30px;
-	    margin: 2px;
-
-	}
-
-}
