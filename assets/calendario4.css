@@ -1,0 +1,371 @@
+
+.espacioTituloInfo {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	height: auto;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.tituloLiga {
+	width: auto;
+	padding: 5px 0;
+	margin-right: auto;
+	white-space: normal;
+	display: flex;
+	align-items: center;
+}
+
+.tituloLiga>span {
+	font-weight: bold;
+	color: #585858;
+	margin-right: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	line-height: 1.5em;
+	max-height: 3em;
+}
+
+.tituloLiga>img {
+	width: 50px;
+	height: 50px;
+}
+
+.espacioAdmGrupos {
+	width: auto;
+	display: flex;
+	justify-content: center;
+	padding: 5px 0;
+}
+
+.espacioAdmGrupos a {
+	height: auto;
+	width: auto;
+}
+
+.botonAdmGrupos {
+	margin: 0;
+    border-radius: 3px;
+}
+
+.textoBotonAdm {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.lineaDivisoriaTitulo {
+	height: 1px;
+	background-color: #DDDDDD;
+}
+
+.secciones {
+	margin: 10px 0 0 0;
+	width: 100%;
+}
+
+.containerBody {
+	width: 100%;
+}
+
+.tituloLiga img {
+	display: none;
+}
+
+.espacioTituloSeccion {
+	margin-right: auto;
+}
+
+.espacioTituloGrupo {
+	width: 100%;
+	background-color: #f7f7f7;
+	border-bottom: 1px solid #DDDDDD;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 1.3em;
+	height: 2.6em;
+}
+
+.accordion-toggle {
+	cursor: pointer;
+}
+
+.espacioPartido {
+	width: 100%;
+	background-color: white;
+	border-bottom: 1px solid #DDDDDD;
+	display: flex;
+	align-items: center;
+	font-size: 12px;
+	line-height: 1.75em;
+	height: 3.5em;
+}
+
+.espacioFechaCal {
+	width: 50px;
+	min-width: 50px;
+	margin-left: 25px;
+	font-size: 10px;
+	text-align: center;
+	line-height: 1.1em;
+}
+
+.espacioEquiposCal {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: inherit;
+}
+
+.espacioEquipo1 {
+	width: calc(50% - 20px);
+	padding-right: 10px;
+	display: flex;
+	justify-content: flex-end;
+	text-align: right;
+}
+
+.espacioEquipo2 {
+	width: calc(50% - 20px);
+	padding-left: 10px;
+	display: flex;
+	justify-content: flex-start;
+	text-align: left;
+}
+
+.primerResultado {
+    width: 15px;
+    min-width: 15px;
+    text-align: center;
+}
+
+.segundoResultado {
+    width: 15px;
+    min-width: 15px;
+    text-align: center;
+}
+
+.separadorGuion {
+    width: 10px;
+    min-width: 10px;
+    text-align: center;
+}
+
+.espacioBotonesCal {
+	width: 60px;
+	min-width: 60px;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 10px;
+}
+
+.botonEditarResultado {
+    color: white;
+    font-size: 16px;
+    height: 35px;
+    width: 35px;
+    margin: 2px;
+    border-radius: 50%;
+    background-color: #E28B55;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonEquipo {
+	padding: 0 5px;
+}
+
+.inputInfoFieldSelect {
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+    padding-left: 0;
+}
+
+.inputInfoFieldSelect select {
+   background: rgba(0, 0, 0, 0.005);
+   border: none;
+   border-radius: 5px;
+   font-size: 14px;
+   height: 30px;
+   width: 150px;
+   color: #585858;
+   font-weight: bold;
+   -moz-appearance: none;
+}
+
+.espacioAcordeonStats {
+	width: 100%;
+	display: flex;
+	height: auto;
+	border-bottom: 1px solid #DDDDDD;
+	background-color: #f7f7f7;
+	font-size: 10px;
+}
+
+.espacioAcordeonStatsEquipo2 {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	height: auto;
+	border-bottom: 1px solid #DDDDDD;
+	background-color: #f7f7f7;
+	font-size: 10px;
+}
+
+.statJugadorEquipo1 {
+	padding-left: 75px;
+	display: flex;
+	align-items: center;
+}
+
+.statJugadorEquipo2 {
+	padding-right: 75px;
+	display: flex;
+	align-items: center;
+}
+
+.statJugadorEquipo1 i {
+	background-color: white;
+	border-radius: 50%;
+	padding: 0 2px;
+}
+
+.statJugadorEquipo2 i {
+	background-color: white;
+	border-radius: 50%;
+	padding: 0 2px;
+}
+
+.tarjetaAmarilla {
+	background-color: yellow;
+	border: 1px solid dimgray;
+	height: 10px;
+	width: 8px;
+	margin: 0 2px;
+}
+
+.tarjetaRoja {
+	background-color: #ff7474;
+	border: 1px solid dimgray;
+	height: 10px;
+	width: 8px;
+	margin: 0 2px;
+}
+
+@media screen and (min-width: 768px) {
+
+    .containerBody {
+        margin: 0 35px;
+        max-width: 850px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .espacioTituloInfo {
+        height: 60px;
+    }
+
+    .tituloLiga img {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .statJugadorEquipo1 {
+		padding-left: 100px;
+	}
+
+	.statJugadorEquipo2 {
+		padding-right: 100px;
+	}
+
+}
+
+@media screen and (max-width: 550px) {
+
+	.espacioFechaCal {
+		margin-left: 10px;
+	}
+
+	.espacioEquiposCal {
+		font-size: 10px;
+		min-width: 155px;
+        flex-wrap: wrap;
+	}
+
+	.espacioEquipo1 {
+		width: 80%;
+		padding-right: 0;
+        padding-left: 5px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+        justify-content: flex-start;
+        -webkit-order: 1;
+        -moz-order: 1;
+        -ms-order: 1;
+        -o-order: 1;
+        order: 1;
+	}
+
+	.espacioEquipo2 {
+		width: 80%;
+		padding-left: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        justify-content: flex-start;
+        -webkit-order: 3;
+        -moz-order: 3;
+        -ms-order: 3;
+        -o-order: 3;
+        order: 3;
+	}
+
+    .primerResultado {
+        width: 20%;
+        -webkit-order: 2;
+        -moz-order: 2;
+        -ms-order: 2;
+        -o-order: 2;
+        order: 2;
+    }
+
+    .segundoResultado {
+        width: 20%;
+        -webkit-order: 4;
+        -moz-order: 4;
+        -ms-order: 4;
+        -o-order: 4;
+        order: 4;
+    }
+
+    .separadorGuion {
+        display: none;
+    }
+
+    .espacioBotonesCal {
+    	width: 50px;
+    	min-width: 50px;
+    }
+
+	.botonEquipo {
+		padding: 0;
+	}
+
+	.statJugadorEquipo1 {
+		padding-left: 10px;
+	}
+
+	.statJugadorEquipo2 {
+		padding-right: 10px;
+	}
+}
