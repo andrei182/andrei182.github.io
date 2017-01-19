@@ -221,6 +221,27 @@
 	font-size: 10px;
 }
 
+.statJugadorHeader {
+	background-color: #DDDDDD;
+	width: 100%;
+	display: flex;
+	font-weight: bold;
+}
+
+.headerEquipo1 {
+	width: 50%;
+	padding-left: 75px;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.headerEquipo2 {
+	width: 50%;
+	padding-right: 75px;
+	display: flex;
+	justify-content: flex-end;
+}
+
 .statJugadorEquipo1 {
 	padding-left: 75px;
 	display: flex;
@@ -286,6 +307,14 @@
 	}
 
 	.statJugadorEquipo2 {
+		padding-right: 100px;
+	}
+
+	.headerEquipo1 {
+		padding-left: 100px;
+	}
+
+	.headerEquipo2 {
 		padding-right: 100px;
 	}
 
@@ -366,6 +395,14 @@
 	}
 
 	.statJugadorEquipo2 {
+		padding-right: 10px;
+	}
+
+	.headerEquipo1 {
+		padding-left: 10px;
+	}
+
+	.headerEquipo2 {
 		padding-right: 10px;
 	}
 }

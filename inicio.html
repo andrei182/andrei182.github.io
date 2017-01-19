@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ligateca</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" media="all" href="assets/applicationinicio.css" data-turbolinks-track="true" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,300,100,900' rel='stylesheet' type='text/css'>
+  <script src="assets/applicationinicio.js" data-turbolinks-track="true"></script>
+  <script src="https://use.fontawesome.com/3e6dfd3a40.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+  <meta name="csrf-param" content="authenticity_token" />
+  <meta name="csrf-token" content="lijbUvI3wLc8iY2EY/uUuP563gu+GLq1A0FtGnf2k+/g20v1V7GgNEca2v27TZbdc0LDfK6EtadV2848szn6YA==" />
+</head>
+
+<body class="mainbody">
+
+  <nav class="main_menu navbar-default" role="navigation">
+    <div class='espacioMenuPrincipal'>
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle botonTresRayas" data-toggle="collapse" data-target="#nav-primary">
+          <span class="sr-only">Desplegar navegacion</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand logo"  href="#">
+          <img src="assets/ligateca_logo_naranja.svg" alt="Ligateca logo naranja" />
+          </a>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-ex1-collapse menuAbierto" id="nav-primary" style="margin-bottom: 0px">
+        <ul class="nav navbar-nav">
+         <li><a class="main_menu_links" href="/league">Mis Ligas</a></li>
+         <li><a class="main_menu_links" href="/league/new">Crear Liga</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right ">
+          <li>
+            <li>
+              <a href='/requests/33/see_new_requests' class='menuLink'>
+                <i class='zmdi zmdi-hc-2x zmdi-notifications-none iconoBlanco'></i>
+              </a>
+            </li>
+          </li>
+          <li class="dropdown menuSize">
+            <a href="#" class="dropdown-toggle menuLink fondoTransparente" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" >
+              <i class="zmdi zmdi-hc-2x zmdi-account-circle zmdi-hc-fw iconoBlanco"></i>
+            </a>
+            <ul class="dropdown-menu opcionesPerfil">
+              <li><a href="/player/33/edit_profile">Perfil</a></li>
+              <li><a href="/users/edit">Cambiar contraseña</a></li>
+              <li><a rel="nofollow" data-method="delete" href="/users/sign_out">Salir</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <form class="navbar-form navbar-right" role="search" action="/league/search_result" method="post" id="search_form">
+          <div class="input-group">
+            <input type="text" name="search_key"  class="form-control search_field" placeholder="Buscar... ">
+            <span class="input-group-btn">
+              <button class="btn search_button search_icon" type="button">
+                <span class="glyphicon glyphicon-search lupa"></span>
+              </button>
+            </span>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <nav class="sub_menu navbar-default" role="navigation">
+    <div class='espacioMenuPrincipal  menuLiga'>
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle buttonSubMenu" data-toggle="collapse" data-target="#nav-secondary" aria-expanded="false">
+          <span class="sr-only">Desplegar navegacion</span>
+          <span>Inicio</span>
+          <i class="fa fa-caret-down toc" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-ex1-collapse" id="nav-secondary">
+        <ul class="nav navbar-nav">
+          <li><a class="sub_menu_links" href="/league/ligatoc">Inicio</a></li>
+          <li><a class="sub_menu_links" href="/league/ligatoc/teams">Equipos</a></li>
+          <li><a class="sub_menu_links" href="/league/ligatoc/stats">Estadísticas</a></li>
+          <li><a class="sub_menu_links" href="/league/ligatoc/standings">Posiciones</a></li>
+          <li>
+            <li class="dropdown ">
+              <a href="#" class="dropdown-toggle sub_menu_links" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Calendario
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="/league/ligatoc/match">Fase de Grupos</a></li>
+                <li><a href="/match/ligatoc/show_playoff_brackets">Eliminatorias</a></li>
+              </ul>
+            </li>
+          </li>
+          <li><a class="sub_menu_links" href="/league/ligatoc/post">Noticias</a></li>
+          <li><a class="sub_menu_links" href="/league/ligatoc/album">Fotos</a> </li>
+          <li><a class="sub_menu_links" href="/league/ligatoc/permission">Permisos</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <div class="bodyContainer">
+
+    <!-- SECCION DE TITULO Y LOGO -->
+    <div class="boxleft noshadow">
+
+      <div class="tituloSeccion shadow" id="tituloLiga">
+        <span>Ligatoc</span>
+      </div>
+
+      <div class="espacioLogo shadow">
+        <a class="logoLiga" href="/league/ligatoc/edit">
+          <img src="assets/league_logo_200.png" alt="League logo 200" />
+        </a>
+      </div>
+
+      <div class="inferiorGeneral shadow">
+        <div class="infoLiga">
+          <span class="infoText">Deporte: Fútbol </span><br>
+          <span class="infoText">Codigo: 117f0b</span><br>
+          <span class="infoText">Pais: Panama</span><br>
+        </div>
+        <div class="espacioFollow">
+          <a class="btn league_follow_button_unable btn-sm" rel="nofollow" data-method="post" href="#">
+            Seguir
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+<!-- ULTIMOS RESULTADOS -->
+<div class="boxright noshadow">
+
+  <!-- ULTIMOS RESULTADOS -->
+<div class="tituloSeccion shadow">
+  <span>Ultimos Resultados</span>
+  <div class="verMas">
+    <span><a class="btn btn-sm linkTodos" href="/league/ligatoc/match">Ver Todos</a></span>
+  </div>
+</div>
+
+<div class="espacioResultados shadow">
+  <div id="results_carousel" class="carousel slide carouselResults" data-ride="carousel" data-interval="false">
+    <div class="carousel-inner">
+
+               <div class="item active">
+
+<div class="league_result_box">
+  <div class="league_result_box_header">Jornada 1</div>
+  <div class="league_result_box_group"><strong> Grupo A </strong></div>
+  <div class="league_latest_result_first">
+     Team 2
+     <div class="league_latest_result_four">0</div>
+  </div>
+  <div class="league_latest_result_second">
+     Team 3
+     <div class="league_latest_result_five">1</div>
+  </div>
+   <div class="league_latest_result_third">
+     <span class="league_latest_footer_left"></span>
+     <span class="league_latest_footer_right"><a href="javascript:void(0)">Detalle de Partido</a></span>
+   </div>
+</div>
+
+<!--
+          <div class="jornadas shadow">
+            <div class="tituloJornada">
+              <span>Jornada 1</span>
+            </div>
+            <div class="infoJornada">
+              <table>
+                <tr class="b1">
+                  <td class="b1 b2">Grupo A</td>
+                  <td></td>
+                </tr>
+                <tr class="b1">
+                  <td class="b2"><span>Winterfell</span></td>
+                  <td class="b3">2</td>
+                </tr>
+                <tr class="b1">
+                  <td class="b2">Casterly Rock</td>
+                  <td class="b3">1</td>
+                </tr>
+              </table>
+                  <p class="b4 links"><a class="links" href="#">Detalle de partido</a></p>
+            </div>
+          </div>
+-->
+
+
+<div class="league_result_box">
+  <div class="league_result_box_header">Jornada 1</div>
+  <div class="league_result_box_group"><strong> Grupo A </strong></div>
+  <div class="league_latest_result_first">
+     Team 1
+     <div class="league_latest_result_four"></div>
+  </div>
+  <div class="league_latest_result_second">
+     Avengers
+     <div class="league_latest_result_five"></div>
+  </div>
+   <div class="league_latest_result_third">
+     <span class="league_latest_footer_left">14-Dec-16</span>
+     <span class="league_latest_footer_right"><a href="javascript:void(0)">Detalle de Partido</a></span>
+   </div>
+</div>
+
+<!--
+          <div class="jornadas shadow">
+            <div class="tituloJornada">
+              <span>Jornada 1</span>
+            </div>
+            <div class="infoJornada">
+              <table>
+                <tr class="b1">
+                  <td class="b1 b2">Grupo A</td>
+                  <td></td>
+                </tr>
+                <tr class="b1">
+                  <td class="b2"><span>Winterfell</span></td>
+                  <td class="b3">2</td>
+                </tr>
+                <tr class="b1">
+                  <td class="b2">Casterly Rock</td>
+                  <td class="b3">1</td>
+                </tr>
+              </table>
+                  <p class="b4 links"><a class="links" href="#">Detalle de partido</a></p>
+            </div>
+          </div>
+-->
+
+
+<div class="league_result_box">
+  <div class="league_result_box_header">Jornada 1</div>
+  <div class="league_result_box_group"><strong> Grupo B </strong></div>
+  <div class="league_latest_result_first">
+     Team 6
+     <div class="league_latest_result_four"></div>
+  </div>
+  <div class="league_latest_result_second">
+     Team 7
+     <div class="league_latest_result_five"></div>
+  </div>
+   <div class="league_latest_result_third">
+     <span class="league_latest_footer_left"></span>
+     <span class="league_latest_footer_right"><a href="javascript:void(0)">Detalle de Partido</a></span>
+   </div>
+</div>
+
+<!--
+          <div class="jornadas shadow">
+            <div class="tituloJornada">
+              <span>Jornada 1</span>
+            </div>
+            <div class="infoJornada">
+              <table>
+                <tr class="b1">
+                  <td class="b1 b2">Grupo A</td>
+                  <td></td>
+                </tr>
+                <tr class="b1">
+                  <td class="b2"><span>Winterfell</span></td>
+                  <td class="b3">2</td>
+                </tr>
+                <tr class="b1">
+                  <td class="b2">Casterly Rock</td>
+                  <td class="b3">1</td>
+                </tr>
+              </table>
+                  <p class="b4 links"><a class="links" href="#">Detalle de partido</a></p>
+            </div>
+          </div>
+-->
+
+               </div>
+
+               <div class="item ">
+
+<div class="league_result_box">
+  <div class="league_result_box_header">Jornada 1</div>
+  <div class="league_result_box_group"><strong> Grupo B </strong></div>
+  <div class="league_latest_result_first">
+     Team 5
+     <div class="league_latest_result_four"></div>
+  </div>
+  <div class="league_latest_result_second">
+     Team 8
+     <div class="league_latest_result_five"></div>
+  </div>
+   <div class="league_latest_result_third">
+     <span class="league_latest_footer_left"></span>
+     <span class="league_latest_footer_right"><a href="javascript:void(0)">Detalle de Partido</a></span>
+   </div>
+</div>
+
+<!--
+          <div class="jornadas shadow">
+            <div class="tituloJornada">
+              <span>Jornada 1</span>
+            </div>
+            <div class="infoJornada">
+              <table>
+                <tr class="b1">
+                  <td class="b1 b2">Grupo A</td>
+                  <td></td>
+                </tr>
+                <tr class="b1">
+                  <td class="b2"><span>Winterfell</span></td>
+                  <td class="b3">2</td>
+                </tr>
+                <tr class="b1">
+                  <td class="b2">Casterly Rock</td>
+                  <td class="b3">1</td>
+                </tr>
+              </table>
+                  <p class="b4 links"><a class="links" href="#">Detalle de partido</a></p>
+            </div>
+          </div>
+-->
+
+
+<div class="league_result_box">
+  <div class="league_result_box_header">Jornada 2</div>
+  <div class="league_result_box_group"><strong> Grupo A </strong></div>
+  <div class="league_latest_result_first">
+     Avengers
+     <div class="league_latest_result_four"></div>
+  </div>
+  <div class="league_latest_result_second">
+     Team 2
+     <div class="league_latest_result_five"></div>
+  </div>
+   <div class="league_latest_result_third">
+     <span class="league_latest_footer_left"></span>
+     <span class="league_latest_footer_right"><a href="javascript:void(0)">Detalle de Partido</a></span>
+   </div>
+</div>
+
+<!--
+          <div class="jornadas shadow">
+            <div class="tituloJornada">
+              <span>Jornada 1</span>
+            </div>
+            <div class="infoJornada">
+              <table>
+                <tr class="b1">
+                  <td class="b1 b2">Grupo A</td>
+                  <td></td>
+                </tr>
+                <tr class="b1">
+                  <td class="b2"><span>Winterfell</span></td>
+                  <td class="b3">2</td>
+                </tr>
+                <tr class="b1">
+                  <td class="b2">Casterly Rock</td>
+                  <td class="b3">1</td>
+                </tr>
+              </table>
+                  <p class="b4 links"><a class="links" href="#">Detalle de partido</a></p>
+            </div>
+          </div>
+-->
+
+
+<div class="league_result_box">
+  <div class="league_result_box_header">Jornada 2</div>
+  <div class="league_result_box_group"><strong> Grupo A </strong></div>
+  <div class="league_latest_result_first">
+     Team 1
+     <div class="league_latest_result_four"></div>
+  </div>
+  <div class="league_latest_result_second">
+     Team 3
+     <div class="league_latest_result_five"></div>
+  </div>
+   <div class="league_latest_result_third">
+     <span class="league_latest_footer_left"></span>
+     <span class="league_latest_footer_right"><a href="javascript:void(0)">Detalle de Partido</a></span>
+   </div>
+</div>
+
+<!--
+          <div class="jornadas shadow">
+            <div class="tituloJornada">
+              <span>Jornada 1</span>
+            </div>
+            <div class="infoJornada">
+              <table>
+                <tr class="b1">
+                  <td class="b1 b2">Grupo A</td>
+                  <td></td>
+                </tr>
+                <tr class="b1">
+                  <td class="b2"><span>Winterfell</span></td>
+                  <td class="b3">2</td>
+                </tr>
+                <tr class="b1">
+                  <td class="b2">Casterly Rock</td>
+                  <td class="b3">1</td>
+                </tr>
+              </table>
+                  <p class="b4 links"><a class="links" href="#">Detalle de partido</a></p>
+            </div>
+          </div>
+-->
+
+               </div>
+
+               <div class="item ">
+
+<div class="league_result_box">
+  <div class="league_result_box_header">Jornada 2</div>
+  <div class="league_result_box_group"><strong> Grupo B </strong></div>
+  <div class="league_latest_result_first">
+     Team 8
+     <div class="league_latest_result_four"></div>
+  </div>
+  <div class="league_latest_result_second">
+     Team 6
+     <div class="league_latest_result_five"></div>
+  </div>
+   <div class="league_latest_result_third">
+     <span class="league_latest_footer_left"></span>
+     <span class="league_latest_footer_right"><a href="javascript:void(0)">Detalle de Partido</a></span>
+   </div>
+</div>
+
+<!--
+          <div class="jornadas shadow">
+            <div class="tituloJornada">
+              <span>Jornada 1</span>
+            </div>
+            <div class="infoJornada">
+              <table>
+                <tr class="b1">
+                  <td class="b1 b2">Grupo A</td>
+                  <td></td>
+                </tr>
+                <tr class="b1">
+                  <td class="b2"><span>Winterfell</span></td>
+                  <td class="b3">2</td>
+                </tr>
+                <tr class="b1">
+                  <td class="b2">Casterly Rock</td>
+                  <td class="b3">1</td>
+                </tr>
+              </table>
+                  <p class="b4 links"><a class="links" href="#">Detalle de partido</a></p>
+            </div>
+          </div>
+-->
+
+
+<div class="league_result_box">
+  <div class="league_result_box_header">Jornada 2</div>
+  <div class="league_result_box_group"><strong> Grupo B </strong></div>
+  <div class="league_latest_result_first">
+     Team 5
+     <div class="league_latest_result_four"></div>
+  </div>
+  <div class="league_latest_result_second">
+     Team 7
+     <div class="league_latest_result_five"></div>
+  </div>
+   <div class="league_latest_result_third">
+     <span class="league_latest_footer_left"></span>
+     <span class="league_latest_footer_right"><a href="javascript:void(0)">Detalle de Partido</a></span>
+   </div>
+</div>
+
+<!--
+          <div class="jornadas shadow">
+            <div class="tituloJornada">
+              <span>Jornada 1</span>
+            </div>
+            <div class="infoJornada">
+              <table>
+                <tr class="b1">
+                  <td class="b1 b2">Grupo A</td>
+                  <td></td>
+                </tr>
+                <tr class="b1">
+                  <td class="b2"><span>Winterfell</span></td>
+                  <td class="b3">2</td>
+                </tr>
+                <tr class="b1">
+                  <td class="b2">Casterly Rock</td>
+                  <td class="b3">1</td>
+                </tr>
+              </table>
+                  <p class="b4 links"><a class="links" href="#">Detalle de partido</a></p>
+            </div>
+          </div>
+-->
+
+
+<div class="league_result_box">
+  <div class="league_result_box_header">Jornada 3</div>
+  <div class="league_result_box_group"><strong> Grupo A </strong></div>
+  <div class="league_latest_result_first">
+     Team 3
+     <div class="league_latest_result_four"></div>
+  </div>
+  <div class="league_latest_result_second">
+     Avengers
+     <div class="league_latest_result_five"></div>
+  </div>
+   <div class="league_latest_result_third">
+     <span class="league_latest_footer_left"></span>
+     <span class="league_latest_footer_right"><a href="javascript:void(0)">Detalle de Partido</a></span>
+   </div>
+</div>
+
+<!--
+          <div class="jornadas shadow">
+            <div class="tituloJornada">
+              <span>Jornada 1</span>
+            </div>
+            <div class="infoJornada">
+              <table>
+                <tr class="b1">
+                  <td class="b1 b2">Grupo A</td>
+                  <td></td>
+                </tr>
+                <tr class="b1">
+                  <td class="b2"><span>Winterfell</span></td>
+                  <td class="b3">2</td>
+                </tr>
+                <tr class="b1">
+                  <td class="b2">Casterly Rock</td>
+                  <td class="b3">1</td>
+                </tr>
+              </table>
+                  <p class="b4 links"><a class="links" href="#">Detalle de partido</a></p>
+            </div>
+          </div>
+-->
+
+               </div>
+
+               <div class="item ">
+
+<div class="league_result_box">
+  <div class="league_result_box_header">Jornada 3</div>
+  <div class="league_result_box_group"><strong> Grupo A </strong></div>
+  <div class="league_latest_result_first">
+     Team 1
+     <div class="league_latest_result_four"></div>
+  </div>
+  <div class="league_latest_result_second">
+     Team 2
+     <div class="league_latest_result_five"></div>
+  </div>
+   <div class="league_latest_result_third">
+     <span class="league_latest_footer_left"></span>
+     <span class="league_latest_footer_right"><a href="javascript:void(0)">Detalle de Partido</a></span>
+   </div>
+</div>
+
+<!--
+          <div class="jornadas shadow">
+            <div class="tituloJornada">
+              <span>Jornada 1</span>
+            </div>
+            <div class="infoJornada">
+              <table>
+                <tr class="b1">
+                  <td class="b1 b2">Grupo A</td>
+                  <td></td>
+                </tr>
+                <tr class="b1">
+                  <td class="b2"><span>Winterfell</span></td>
+                  <td class="b3">2</td>
+                </tr>
+                <tr class="b1">
+                  <td class="b2">Casterly Rock</td>
+                  <td class="b3">1</td>
+                </tr>
+              </table>
+                  <p class="b4 links"><a class="links" href="#">Detalle de partido</a></p>
+            </div>
+          </div>
+-->
+
+
+<div class="league_result_box">
+  <div class="league_result_box_header">Jornada 3</div>
+  <div class="league_result_box_group"><strong> Grupo B </strong></div>
+  <div class="league_latest_result_first">
+     Team 7
+     <div class="league_latest_result_four"></div>
+  </div>
+  <div class="league_latest_result_second">
+     Team 8
+     <div class="league_latest_result_five"></div>
+  </div>
+   <div class="league_latest_result_third">
+     <span class="league_latest_footer_left"></span>
+     <span class="league_latest_footer_right"><a href="javascript:void(0)">Detalle de Partido</a></span>
+   </div>
+</div>
+
+<!--
+          <div class="jornadas shadow">
+            <div class="tituloJornada">
+              <span>Jornada 1</span>
+            </div>
+            <div class="infoJornada">
+              <table>
+                <tr class="b1">
+                  <td class="b1 b2">Grupo A</td>
+                  <td></td>
+                </tr>
+                <tr class="b1">
+                  <td class="b2"><span>Winterfell</span></td>
+                  <td class="b3">2</td>
+                </tr>
+                <tr class="b1">
+                  <td class="b2">Casterly Rock</td>
+                  <td class="b3">1</td>
+                </tr>
+              </table>
+                  <p class="b4 links"><a class="links" href="#">Detalle de partido</a></p>
+            </div>
+          </div>
+-->
+
+
+<div class="league_result_box">
+  <div class="league_result_box_header">Jornada 3</div>
+  <div class="league_result_box_group"><strong> Grupo B </strong></div>
+  <div class="league_latest_result_first">
+     Team 5
+     <div class="league_latest_result_four"></div>
+  </div>
+  <div class="league_latest_result_second">
+     Team 6
+     <div class="league_latest_result_five"></div>
+  </div>
+   <div class="league_latest_result_third">
+     <span class="league_latest_footer_left"></span>
+     <span class="league_latest_footer_right"><a href="javascript:void(0)">Detalle de Partido</a></span>
+   </div>
+</div>
+
+<!--
+          <div class="jornadas shadow">
+            <div class="tituloJornada">
+              <span>Jornada 1</span>
+            </div>
+            <div class="infoJornada">
+              <table>
+                <tr class="b1">
+                  <td class="b1 b2">Grupo A</td>
+                  <td></td>
+                </tr>
+                <tr class="b1">
+                  <td class="b2"><span>Winterfell</span></td>
+                  <td class="b3">2</td>
+                </tr>
+                <tr class="b1">
+                  <td class="b2">Casterly Rock</td>
+                  <td class="b3">1</td>
+                </tr>
+              </table>
+                  <p class="b4 links"><a class="links" href="#">Detalle de partido</a></p>
+            </div>
+          </div>
+-->
+
+               </div>
+
+
+    </div>
+
+    <a href="#results_carousel" class="league_results_box_link_left carousel-control left" aria-label="Previous" data-slide="prev">
+      <span aria-hidden="true">&laquo;</span>
+    </a>
+    <a href="#results_carousel" class="league_results_box_link_right carousel-control right" aria-label="Next" data-slide="next" >
+        <span aria-hidden="true">&raquo;</span>
+    </a>
+   </div>
+</div>
+
+  <div class="tituloSeccion shadow">
+  <span>Ultimas Noticias</span>
+  <div class="verMas">
+    <span><a class="btn btn-sm linkTodos" href="/league/ligatoc/post">Ver Todas</a></span>
+  </div>
+</div>
+<div class="espacioNoticias shadow">
+     <div class="espacionoticia1">
+        <div class="notizq">
+          <a href="#">
+                      <img class="fotoperfil" src="/assets/user/33/mini/IMG_1810.jpg?1474037151" alt="Img 1810" />
+           </a>
+         </div>
+         <div class="notder">
+            <h3 class="titunoticia">Ligatoc ha sido creada</h3>
+            <span class="descnoticia">Nueva Liga Ligatoc </span>
+         </div>
+     </div>
+</div>
+
+  <div class="tituloSeccion shadow statsmargin">
+  <span>Fotos</span>
+  <div class="verMas">
+    <span><a class="btn btn-sm linkTodos" href="/league/ligatoc/album">Ver Todas</a></span>
+  </div>
+</div>
+<div class="espacioNoticias shadow">
+            <div class="league_photo_empty">
+              No se han añadido fotos<br/>
+                <a class=" btn album_button" role="button" href="/league/ligatoc/album/new">Agregar Album</a>
+            </div>
+</div>
+
+</div>
+
+
+<!-- CLASIFICACION Y ESTADISTICAS -->
+
+<div class="boxleft noshadow">
+    <div class="tituloSeccion shadow">
+    <span>Clasificacion</span>
+    <div class="verMas">
+        <span><a class="btn btn-sm linkTodos" href="/league/ligatoc/standings">Ver Todos</a></span>
+    </div>
+  </div>
+   <div class="espacioClasi shadow">
+     <div id="standings_carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+       <div class="carousel-inner">
+              <div class="item active">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th class="header_carousel" colspan="4">Grupo A</th>
+                  </tr>
+                  <tr>
+                    <th>#</th>
+                    <th>Equipo</th>
+                    <th>PJ</th>
+                    <th>PTS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="league_table_cell">1</th>
+                    <td class="league_table_cell">Team 3</td>
+                    <td class="league_table_cell">1</td>
+                    <td class="league_table_cell">3</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="league_table_cell">2</th>
+                    <td class="league_table_cell">Avengers</td>
+                    <td class="league_table_cell">0</td>
+                    <td class="league_table_cell">0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="league_table_cell">3</th>
+                    <td class="league_table_cell">Team 1</td>
+                    <td class="league_table_cell">0</td>
+                    <td class="league_table_cell">0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="league_table_cell">4</th>
+                    <td class="league_table_cell">Team 2</td>
+                    <td class="league_table_cell">1</td>
+                    <td class="league_table_cell">0</td>
+                  </tr>
+                </tbody>
+            </table>
+            </div>
+               <div class="item">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th class="header_carousel" colspan="4">Grupo B</th>
+                  </tr>
+                  <tr>
+                    <th>#</th>
+                    <th>Equipo</th>
+                    <th>PJ</th>
+                    <th>PTS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="league_table_cell">1</th>
+                    <td class="league_table_cell">Team 8</td>
+                    <td class="league_table_cell">0</td>
+                    <td class="league_table_cell">0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="league_table_cell">2</th>
+                    <td class="league_table_cell">Team 7</td>
+                    <td class="league_table_cell">0</td>
+                    <td class="league_table_cell">0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="league_table_cell">3</th>
+                    <td class="league_table_cell">Team 6</td>
+                    <td class="league_table_cell">0</td>
+                    <td class="league_table_cell">0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="league_table_cell">4</th>
+                    <td class="league_table_cell">Team 5</td>
+                    <td class="league_table_cell">0</td>
+                    <td class="league_table_cell">0</td>
+                  </tr>
+                </tbody>
+            </table>
+            </div>
+        <a href="#standings_carousel" id="standings_prev" class="league_pager_link_right carousel-control left" data-slide="prev"><span aria-hidden="true">&laquo;</span></a>
+        <a href="#standings_carousel" id="standings_next" class="league_pager_link_left carousel-control right" data-slide="next"><span aria-hidden="true">&raquo;</span></a>
+       </div>
+    </div>
+  </div>
+
+
+
+
+<div class="tituloSeccion shadow statsmargin">
+   <span>Estadisticas</span>
+   <div class="verMas">
+      <span><a class="btn btn-sm linkTodos" href="/league/ligatoc/stats">Ver Todos</a></span>
+   </div>
+</div>
+<div class="espacioStats shadow">
+  <div id="stats_carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+    <div class="carousel-inner">
+           <div class='item active'>
+                <table class="table">
+                  <thead>
+                    <tr>
+                        <th class="header_carousel" colspan="3">Goles</th>
+                    </tr>
+                    <tr>
+                      <th>#</th>
+                      <th>Jugador</th>
+                        <th>Goles</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+           </div>
+           <div class='item'>
+                <table class="table">
+                  <thead>
+                    <tr>
+                        <th class="header_carousel" colspan="3">Asistencias</th>
+                    </tr>
+                    <tr>
+                      <th>#</th>
+                      <th>Jugador</th>
+                          <th>Asistencias</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+           </div>
+           <div class='item'>
+                <table class="table">
+                  <thead>
+                    <tr>
+                        <th class="header_carousel" colspan="3">Tarjetas Amarillas</th>
+                    </tr>
+                    <tr>
+                      <th>#</th>
+                      <th>Jugador</th>
+                          <th>Tarjetas Amarillas</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+           </div>
+           <div class='item'>
+                <table class="table">
+                  <thead>
+                    <tr>
+                        <th class="header_carousel" colspan="3">Tarjetas Rojas</th>
+                    </tr>
+                    <tr>
+                      <th>#</th>
+                      <th>Jugador</th>
+                          <th>Tarjetas Rojas</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+           </div>
+        <a href="#stats_carousel" class="league_pager_link_right carousel-control left" aria-label="Previous" data-slide="prev"><span aria-hidden="true">&laquo;</span></a>
+        <a href="#stats_carousel" class="league_pager_link_left carousel-control right" aria-label="Next" data-slide="next" ><span aria-hidden="true">&raquo;</span></a>
+    </div>
+   </div>
+</div>
+
+
+</div>
+
+
+<!-- ULTIMAS NOTICIAS Y FOTOS-->
+<!--
+<div class="boxright noticias noshadow">
+   <div class="tituloSeccion shadow">
+  <span>Ultimas Noticias</span>
+  <div class="verMas">
+    <span><a class="btn btn-sm linkTodos" href="/league/ligatoc/post">Ver Todas</a></span>
+  </div>
+</div>
+<div class="espacioNoticias shadow">
+     <div class="espacionoticia1">
+        <div class="notizq">
+          <a href="#">
+                      <img class="fotoperfil" src="/assets/user/33/mini/IMG_1810.jpg?1474037151" alt="Img 1810" />
+           </a>
+         </div>
+         <div class="notder">
+            <h3 class="titunoticia">Ligatoc ha sido creada</h3>
+            <span class="descnoticia">Nueva Liga Ligatoc </span>
+         </div>
+     </div>
+</div>
+
+   <div class="tituloSeccion shadow statsmargin">
+  <span>Fotos</span>
+  <div class="verMas">
+    <span><a class="btn btn-sm linkTodos" href="/league/ligatoc/album">Ver Todas</a></span>
+  </div>
+</div>
+<div class="espacioNoticias shadow">
+            <div class="league_photo_empty">
+              No se han añadido fotos<br/>
+                <a class=" btn album_button" role="button" href="/league/ligatoc/album/new">Agregar Album</a>
+            </div>
+</div>
+
+</div>
+-->
+
+
+
+
+   </div>
+</body>
+</html>
