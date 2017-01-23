@@ -17,6 +17,10 @@
     box-shadow: 0px 2px 4px 0px rgba(151,151,151,0.5);
 }
 
+.noShadow {
+    box-shadow: none;
+}
+
 
 .panelInfoLiga {
     width: 100%;
@@ -159,7 +163,7 @@
 .panelSeccion {
     width: 100%;
     height: auto;
-    margin-top: 10px;
+    margin-top: 15px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -490,6 +494,10 @@
 
 .fotosCuerpo a:hover {
     text-decoration: none;
+}
+
+.ultimaSeccion {
+    margin-bottom: 40px;
 }
 
 @media screen and (min-width: 768px) {
