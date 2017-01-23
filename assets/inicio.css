@@ -1,4 +1,4 @@
-.bodyContainer {
+.bodyContainerInicio {
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -38,7 +38,7 @@
 }
 
 .infoLigaLogo {
-    padding: 5px 10px 5px 25px;
+    padding: 5px 10px 5px 10px;
 }
 
 .infoLigaLogo > a > img {
@@ -60,21 +60,31 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    width: 110px;
+    min-width: 110px;
+}
+
+.infoLigaTextoTitulo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #365e78;
+    padding: 8px 10px;
 }
 
 .infoLigaTextoTitulo span {
     font-size: 14px;
     font-weight: bold;
-    padding-left: 10px;
-    color: #585858;
-    line-height: 2em;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
 }
 
 .infoLigaTextoResto {
-    padding-left: 10px;
     font-size: 10px;
     color: #6b6b6b;
-    line-height: 1.2em;
 }
 
 .infoLigaFollow {
@@ -98,7 +108,7 @@
     font-size: 14px;
     padding: 6px 12px;
     border-radius: 3px;
-    margin-right: 25px;
+    margin-right: 10px;
     text-decoration: none;
 }
 
@@ -109,6 +119,14 @@
     display: flex;
     width: 100%;
     font-size: 12px;
+}
+
+.panelTitulo a {
+    text-decoration: none;
+}
+
+.panelTitulo a:hover {
+    text-decoration: none;
 }
 
 .tituloIzq {
@@ -135,9 +153,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 33px;
 }
 
-.panelUltResultados {
+.panelSeccion {
     width: 100%;
     height: auto;
     margin-top: 10px;
@@ -254,6 +273,222 @@
 
 .resultadoInfo span {
     padding-left: 10px;
+}
+
+.clasestCuerpo {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-flow: column;
+}
+
+.clasestTitulo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.iconoMover {
+    padding: 0 10px;
+    font-size: 20px;
+}
+
+.clasestTituloTexto {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.clasestHeaders {
+    width: 100%;
+    display: flex;
+    font-size: 12px;
+    border-bottom: 1px solid #d1d1d1;
+    font-weight: bold;
+    align-items: center;
+    padding: 5px 0;
+    background-color: #f7f7f7;
+}
+
+.clasestHeaderRango {
+    width: 20px;
+}
+
+.clasestHeaderNombre {
+    margin-right: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    line-height: 1em;
+}
+
+.clasestHeaderStat {
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1em;
+}
+
+.clasestInfo {
+    display: flex;
+    flex-flow: column;
+}
+
+.clasestInfoLinea {
+    width: 100%;
+    display: flex;
+    font-size: 12px;
+    border-bottom: 1px solid #d1d1d1;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.clasestInfoRango {
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1em;
+}
+
+.clasestInfoNombre {
+    margin-right: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    line-height: 1em;
+}
+
+.clasestInfoStat {
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1em;
+}
+
+.noticiasCuerpo {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-flow: column;
+}
+
+.noticiasLinea {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.noticiasProfile {
+    width: 50px;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.noticiasProfile img {
+    width: 50px;
+    max-width: 50px;
+    max-height: 50px
+}
+
+.linkNoticia {
+    text-decoration: none;
+    color: inherit;
+    width: calc(100% - 70px);
+}
+
+.linkNoticia:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.noticiasTexto {
+    width: calc(100% - 10px);
+    height: 60px;
+    margin-right: 10px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-bottom: 1px solid #d1d1d1;
+    white-space: nowrap;
+}
+
+.ultimaNoticia {
+    border-bottom: none;
+}
+
+.noticiaTitulo {
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1em;
+    padding: 5px 0 2.5px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.noticiaContenido {
+    width: 100%;
+    font-size: 12px;
+    line-height: 1em;
+    padding: 2.5px 0 5px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.fotosCuerpo {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+.espacioFoto {
+    padding: 10px;
+}
+
+.fotoLeyenda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background-color: #d1d1d1;
+    font-size: 12px;
+    padding: 2.5px 0;
+}
+
+.fotosCuerpo img {
+    width: 150px;
+    height: 150px;
+    max-width: 150px;
+    max-height: 150px;
+    min-width: 150px;
+    min-height: 150px;
+}
+
+.fotosCuerpo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.fotosCuerpo a:hover {
+    text-decoration: none;
 }
 
 @media screen and (min-width: 768px) {
