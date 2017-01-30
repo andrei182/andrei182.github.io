@@ -82,7 +82,7 @@
 
 .espacioTituloGrupo {
 	width: 100%;
-	background-color: #f7f7f7;
+	background-color: #dddddd;
 	border-bottom: 1px solid #DDDDDD;
 	display: flex;
 	align-items: center;
@@ -222,7 +222,7 @@
 }
 
 .statJugadorHeader {
-	background-color: #DDDDDD;
+	background-color: #f7f7f7;
 	width: 100%;
 	display: flex;
 	font-weight: bold;
@@ -323,7 +323,10 @@
 @media screen and (max-width: 550px) {
 
 	.espacioFechaCal {
-		margin-left: 10px;
+		margin-left: 0;
+        font-size: 8px;
+        width: 40px;
+        min-width: 40px;
 	}
 
 	.espacioEquiposCal {
