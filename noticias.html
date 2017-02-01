@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ligateca</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" media="all" href="assets/application-cal.css" data-turbolinks-track="true" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,300,100,900' rel='stylesheet' type='text/css'>
+  <script src="assets/application-cal.js" data-turbolinks-track="true"></script>
+  <script src="https://use.fontawesome.com/3e6dfd3a40.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+  <meta name="csrf-param" content="authenticity_token" />
+  <meta name="csrf-token" content="NhzcfNRuQ0wp+47oI4zB/lMl+pfXhMrJpPKbK/5Eyeb/tFNfjgDNTXTPxHNJMj5PWTF/dZAx5HFvwK3YVn56kg==" />
+  <link rel="stylesheet" href="assets/usoGeneral.css">
+  <link rel="stylesheet" href="assets/noticias.css">
+</head>
+
+<body class="mainbody">
+  <nav class="main_menu navbar-default" role="navigation">
+    <div class='espacioMenuPrincipal'>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle botonTresRayas" data-toggle="collapse" data-target="#nav-primary">
+            <span class="sr-only">Desplegar navegacion</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand logo"  href="#"><img src="assets/ligateca_logo_naranja.svg" alt="Ligateca logo naranja" /></a>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-ex1-collapse menuAbierto" id="nav-primary" style="margin-bottom: 0px">
+        <ul class="nav navbar-nav">
+         <li><a class="main_menu_links" href="/league">Mis Ligas</a></li>
+         <li><a class="main_menu_links" href="/league/new">Crear Liga</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right ">
+          <li>
+            <li>
+              <a href='/requests/33/see_new_requests' class='menuLink'>
+                <i class='zmdi zmdi-hc-2x zmdi-notifications-none iconoBlanco'></i>
+              </a>
+            </li>
+          </li>
+          <li class="dropdown menuSize">
+            <a href="#" class="dropdown-toggle menuLink fondoTransparente" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" >
+              <i class="zmdi zmdi-hc-2x zmdi-account-circle zmdi-hc-fw iconoBlanco"></i>
+            </a>
+            <ul class="dropdown-menu opcionesPerfil">
+              <li><a href="/player/33/edit_profile">Perfil</a></li>
+              <li><a href="/users/edit">Cambiar contraseña</a></li>
+              <li><a rel="nofollow" data-method="delete" href="/users/sign_out">Salir</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <form class="navbar-form navbar-right" role="search" action="/league/search_result" method="post" id="search_form">
+          <div class="input-group">
+            <input type="text" name="search_key"  class="form-control search_field" placeholder="Buscar... ">
+              <span class="input-group-btn">
+                <button class="btn search_button search_icon" type="button">
+                  <span class="glyphicon glyphicon-search lupa"></span>
+                </button>
+              </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="sub_menu navbar-default" role="navigation">
+
+    <div class='espacioMenuPrincipal  menuLiga'>
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle buttonSubMenu" data-toggle="collapse" data-target="#nav-secondary" aria-expanded="false">
+          <span class="sr-only">Desplegar navegacion</span>
+          <span>Inicio</span>
+          <i class="fa fa-caret-down toc" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-ex1-collapse" id="nav-secondary">
+        <ul class="nav navbar-nav">
+          <li><a class="sub_menu_links" href="/league/copa_america%202015">Inicio</a></li>
+          <li><a class="sub_menu_links" href="/league/copa_america%202015/teams">Equipos</a></li>
+          <li><a class="sub_menu_links" href="/league/copa_america%202015/stats">Estadísticas</a></li>
+          <li><a class="sub_menu_links" href="/league/copa_america%202015/standings">Posiciones</a></li>
+          <li>
+            <li class="dropdown ">
+              <a href="#" class="dropdown-toggle sub_menu_links" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Calendario
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="/league/copa_america%202015/match">Fase de Grupos</a></li>
+                <li><a href="/match/copa_america%202015/show_playoff_brackets">Eliminatorias</a></li>
+              </ul>
+            </li>
+          </li>
+          <li><a class="sub_menu_links" href="/league/copa_america%202015/post">Noticias</a></li>
+          <li><a class="sub_menu_links" href="/league/copa_america%202015/album">Fotos</a> </li>
+          <li><a class="sub_menu_links" href="/league/copa_america%202015/permission">Permisos</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+
+
+  <div class="espacioGeneral">
+
+    <!-- PANEL DE INFO LIGA -->
+    <div class="panelLiga shadow">
+      <div class="espacioLogoLiga">
+        <img src="assets/league_logo_50.png" alt="Logo de Liga">
+      </div>
+      <div class="espacioNombreLiga">
+        <span>Liga Andrei Ivan Plotnikoff Cuevas</span>
+      </div>
+      <div class="espacioBotonVerde">
+        <a href="#">
+          <div class="botonVerde">
+            <span>Agregar Noticia</span>
+          </div>
+          <div class="iconoVerde">
+            <i class="zmdi zmdi-plus-circle"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- FIN DE PANEL DE INFO LIGA -->
+
+    <!-- CUERPO DE NOTICIAS -->
+    <div class="seccionLigateca shadow">
+      <div class="tituloSeccionLigateca">
+        <div class="textoTituloSeccion">
+          <span>Noticias</span>
+        </div>
+      </div>
+      <div class="lineaDivisoriaAzul"></div>
+      <div class="cuerpoNoticias">
+        <!-- NOTICIA 1 -->
+        <div class="lineaNoticia dropdownActivar" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+          <div class="espacioNoticiaFig">
+            <img src="assets/league_logo_50.png" alt="fecha de publicación">
+          </div>
+          <div class="espacioNoticiaTexto">
+            <span>Mascherano hizo de Busquets ante el Atlético de Madrid</span>
+          </div>
+          <div class="espacioNoticiaIcono">
+            <i class="zmdi zmdi-chevron-right"></i>
+          </div>
+        </div>
+        <!-- FIN NOTICIA 1 -->
+        <!-- ACORDEON -->
+          <div id="collapse4" class="panel-collapse collapse">
+            <div class="contenidoNoticia">
+              <span>
+                Con la apuesta de Mascherano en el centro del campo, el resto del once titular del FC Barcelona está practicamente configurado. Luis Enrique, entrenador del FC Barcelona, ha apostado por el que sería un once de gala, un once de garantías. Un once sin sorpresas en el que Ivan Rakitic, que no tuvo su día ante el Betis, se mantiene en el equipo titular aunque en esta ocasión como interior. Junto a ellos, Andre Gomes completará el centro del campo del Barcelona en el Atlético Madrid - FC Barcelona.
+              </span>
+            </div>
+          </div>
+          <!-- FIN DE ACORDEON -->
+        <!-- NOTICIA 2 -->
+        <div class="lineaNoticia dropdownActivar" data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+          <div class="espacioNoticiaFig">
+            <img src="assets/league_logo_50.png" alt="fecha de publicación">
+          </div>
+          <div class="espacioNoticiaTexto">
+            <span>El recibimiento de Gerard en Madrid: "¡Piqué presidente!"</span>
+          </div>
+          <div class="espacioNoticiaIcono">
+            <i class="zmdi zmdi-chevron-right"></i>
+          </div>
+        </div>
+        <!-- FIN NOTICIA 2 -->
+        <!-- ACORDEON -->
+          <div id="collapse5" class="panel-collapse collapse">
+            <div class="contenidoNoticia">
+              <span>
+                No es un detalle inhabitual ya que el propio futbolista ha confesado en diferentes entrevistas que cuando cuelgue las botas le haría ilusión competir por la presidencia del club. Gerard es socio barcelonista desde la cuna y vería completado así un sueño al alcance de muy pocos, de hecho una circunstancia que prácticamente no s eha producido desde la época de los pioneros como el fundador Joan Gamper.
+              </span>
+              <span class="fechaNoticia">
+                2-feb-2017
+              </span>
+            </div>
+          </div>
+          <!-- FIN DE ACORDEON -->
+
+
+      </div>
+    </div>
+    <!-- FIN CUERPO DE NOTICIAS -->
+
+
+
+  </div><!-- Cierra class espacioGeneral -->
+
+</body>
+</html>
