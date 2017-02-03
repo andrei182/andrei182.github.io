@@ -13,7 +13,7 @@
   <meta name="csrf-param" content="authenticity_token" />
   <meta name="csrf-token" content="NhzcfNRuQ0wp+47oI4zB/lMl+pfXhMrJpPKbK/5Eyeb/tFNfjgDNTXTPxHNJMj5PWTF/dZAx5HFvwK3YVn56kg==" />
   <link rel="stylesheet" href="assets/usoGeneral.css">
-  <link rel="stylesheet" href="assets/noticias.css">
+  <link rel="stylesheet" href="assets/permisos.css">
 </head>
 
 <body class="mainbody">
@@ -119,83 +119,105 @@
       <div class="espacioNombreLiga">
         <span>Liga Andrei Ivan Plotnikoff Cuevas</span>
       </div>
-      <div class="espacioBotonVerde">
-        <a href="#">
-          <div class="botonVerde">
-            <span>Agregar Noticia</span>
-          </div>
-          <div class="iconoVerde">
-            <i class="zmdi zmdi-plus-circle"></i>
-          </div>
-        </a>
-      </div>
     </div>
     <!-- FIN DE PANEL DE INFO LIGA -->
 
-    <!-- CUERPO DE NOTICIAS -->
+    <!-- ESPACIO AGREGAR COADMINS -->
     <div class="seccionLigateca margenAbajoSeccion shadow">
       <div class="tituloSeccionLigateca">
         <div class="textoTituloSeccion">
-          <span>Noticias</span>
+          <span>Permisos</span>
         </div>
       </div>
       <div class="lineaDivisoriaAzul"></div>
-      <div class="cuerpoNoticias">
-        <!-- NOTICIA 1 -->
-        <div class="lineaNoticia dropdownActivar" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
-          <div class="espacioNoticiaFig">
-            <img src="assets/league_logo_50.png" alt="fecha de publicación">
-          </div>
-          <div class="espacioNoticiaTexto">
-            <span>Mascherano hizo de Busquets ante el Atlético de Madrid</span>
-          </div>
-          <div class="espacioNoticiaIcono">
-            <i class="zmdi zmdi-chevron-right"></i>
-          </div>
-        </div>
-        <!-- FIN NOTICIA 1 -->
-        <!-- ACORDEON -->
-          <div id="collapse4" class="panel-collapse collapse">
-            <div class="contenidoNoticia">
-              <span>
-                Con la apuesta de Mascherano en el centro del campo, el resto del once titular del FC Barcelona está practicamente configurado. Luis Enrique, entrenador del FC Barcelona, ha apostado por el que sería un once de gala, un once de garantías. Un once sin sorpresas en el que Ivan Rakitic, que no tuvo su día ante el Betis, se mantiene en el equipo titular aunque en esta ocasión como interior. Junto a ellos, Andre Gomes completará el centro del campo del Barcelona en el Atlético Madrid - FC Barcelona.
-              </span>
-              <span class="fechaNoticia">
-                2-feb-2017
-              </span>
+
+      <div class="permisosCuerpo">
+        <div class="espacioAgregarPermisos">
+          <span class="textoCoAdmin">
+            Los Co-Administradores pueden modificar resultados, editar
+            equipos, calendarios, agregar noticias y fotos.
+          </span>
+          <a href="#">
+            <div class="botonVerde colorNaranja">
+              <span>Agregar Co-Administrador</span>
+            </div>
+          </a>
+          <div class="escribirEmailCoAdmin">
+            <input type="text" name="Coadmin" placeholder="Email">
+            <div class="borrarAward">
+              <a href="#">
+                <div class="iconoBorrarAward">
+                  <i class="zmdi zmdi-close-circle"></i>
+                </div>
+              </a>
             </div>
           </div>
-          <!-- FIN DE ACORDEON -->
-        <!-- NOTICIA 2 -->
-        <div class="lineaNoticia dropdownActivar" data-toggle="collapse" data-parent="#accordion" href="#collapse5">
-          <div class="espacioNoticiaFig">
-            <img src="assets/league_logo_50.png" alt="fecha de publicación">
+          <div class="emailInvalido">
+            <span>Favor ingresar un email válido</span>
           </div>
-          <div class="espacioNoticiaTexto">
-            <span>El recibimiento de Gerard en Madrid: "¡Piqué presidente!"</span>
-          </div>
-          <div class="espacioNoticiaIcono">
-            <i class="zmdi zmdi-chevron-right"></i>
-          </div>
-        </div>
-        <!-- FIN NOTICIA 2 -->
-        <!-- ACORDEON -->
-          <div id="collapse5" class="panel-collapse collapse">
-            <div class="contenidoNoticia">
-              <span>
-                No es un detalle inhabitual ya que el propio futbolista ha confesado en diferentes entrevistas que cuando cuelgue las botas le haría ilusión competir por la presidencia del club. Gerard es socio barcelonista desde la cuna y vería completado así un sueño al alcance de muy pocos, de hecho una circunstancia que prácticamente no s eha producido desde la época de los pioneros como el fundador Joan Gamper.
-              </span>
-              <span class="fechaNoticia">
-                2-feb-2017
-              </span>
+          <div class="escribirEmailCoAdmin">
+            <input type="text" name="Coadmin" placeholder="Email">
+            <div class="borrarAward">
+              <a href="#">
+                <div class="iconoBorrarAward">
+                  <i class="zmdi zmdi-close-circle"></i>
+                </div>
+              </a>
             </div>
           </div>
-          <!-- FIN DE ACORDEON -->
+          <a href="#">
+            <div class="botonVerde marginTop10">
+              <span>Guardar cambios</span>
+            </div>
+          </a>
+        </div>
+      </div><!-- CIERRA CLASE permisosCuerpo -->
 
-
+      <div class="espacioCoAdminsAgregados">
+        <div class="lineaCoAdminAgregado">
+          <div class="infoCoAdminAgregado">
+            <div class="nombreCoAdmin">
+              <span>Ariel Torrazza</span>
+            </div>
+            <div class="emailCoAdmin">
+              <span>atorrazza@gmail.com</span>
+            </div>
+            <div class="rolCoAdmin">
+              <span>Co-Admin</span>
+            </div>
+          </div>
+          <div class="borrarCoAdmin">
+            <a href="#">
+              <div class="iconoBorrarCoAdmin">
+                <i class="zmdi zmdi-close-circle"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="lineaCoAdminAgregado">
+          <div class="infoCoAdminAgregado">
+            <div class="nombreCoAdmin">
+              <span>Sergei Plotnikoff</span>
+            </div>
+            <div class="emailCoAdmin">
+              <span>sergeipt@gmail.com</span>
+            </div>
+            <div class="rolCoAdmin">
+              <span>Co-Admin</span>
+            </div>
+          </div>
+          <div class="borrarCoAdmin">
+            <a href="#">
+              <div class="iconoBorrarCoAdmin">
+                <i class="zmdi zmdi-close-circle"></i>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
+
     </div>
-    <!-- FIN CUERPO DE NOTICIAS -->
+    <!-- FIN ESPACIO AGREGAR COADMINS -->
 
 
 

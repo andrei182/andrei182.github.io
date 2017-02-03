@@ -628,7 +628,8 @@
     font-weight: bold;
     background-color: #d1d1d1;
     font-size: 12px;
-    padding: 2.5px 0;
+    padding: 2.5px 5px;
+    max-width: 150px;
 }
 
 .fotosCuerpo img {
@@ -730,6 +731,10 @@ grande para que hayan dos modulos*/
         max-height: 145px;
         min-width: 145px;
         min-height: 145px;
+    }
+
+    .fotoLeyenda {
+        max-width: 145px;
     }
 
     .mostrarFotoInicio {
