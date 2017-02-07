@@ -15,6 +15,16 @@
     padding: 0;
 }
 
+.botonVerdeGuardar {
+    background-color: #58b957;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 7px 12px;
+    border-radius: 3px;
+    font-family: "Roboto";
+}
+
 .equipo1Score {
     width: 100%;
     height: auto;
