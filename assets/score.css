@@ -1,0 +1,225 @@
+.cuerpoScore {
+    width: 100%;
+    height: auto;
+}
+
+.equipo1Score {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #DDDDDD;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.espacioEquipoScore {
+    font-weight: bold;
+    font-size: 12px;
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+}
+
+.espacioEquipoScore span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 1.5em;
+    max-height: 3em;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.espacioEquipoScore .resultadoEquipo {
+    font-size: 36px;
+    line-height: 1em;
+    height: 100%;
+}
+
+.espacioIngresoDatos {
+    width: 50%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.espacioIngresoStats {
+    width: calc(100% / 3);
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ingresoGoles {
+    background-color: #55e295;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.ingresoAsist {
+    background-color: #5ec0d6;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.ingresoTarjetas {
+    background-color: #e25555;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.lineaJugadorAgregarStat {
+    border-bottom: 1px solid #DDDDDD;
+    background-color: #f7f7f7;
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.lineaTarjeta {
+    height: 71px;
+}
+
+.nombreJugadorAgregarStat {
+    width: 100%;
+    display: flex;
+}
+
+.nombreJugadorAgregarStat span:first-child {
+    width: 30px;
+    text-align: center;
+}
+
+.espacioAgregarReducir {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    min-width: 40px;
+}
+
+.espacioAgregarReducirChico {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    min-width: 25px;
+}
+
+.iconoAgregarStat {
+    width: 100%;
+    height: 100%;
+    background-color: #81ef81;
+    color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    font-size: 36px;
+}
+
+.iconoAgregarStat span {
+    line-height: 1em;
+    height: 100%;
+}
+
+.iconoReducirStat {
+    width: 100%;
+    height: 100%;
+    background-color: #f77777;
+    color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    font-size: 36px;
+}
+
+.iconoReducirStat span {
+    line-height: 1em;
+    height: 100%;
+
+}
+
+.aStatChico {
+    font-size: 23px;
+}
+
+.espacioStatActual {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 12px;
+    min-width: 61px;
+}
+
+.espacioStatActual span:last-child {
+    font-size: 20px;
+}
+
+.actualChico {
+
+}
+
+.actualChico span:last-child {
+    font-size: 12px;
+    line-height: 1em;
+}
+
+.agregarTarjeta {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.espacioAmarillaRoja {
+    display: flex;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 414px) {
+
+    .espacioNoticiaFig {
+        width: 50px;
+        padding-left: 10px;
+    }
+
+    .espacioNoticiaFig img {
+        width: 40px;
+        max-width: 40px;
+        height: 40px;
+        max-height: 40px;
+    }
+
+    .espacioNoticiaTexto {
+        font-size: 12px;
+    }
+
+    .contenidoNoticia {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
