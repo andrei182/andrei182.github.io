@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ligateca</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" media="all" href="assets/application-cal.css" data-turbolinks-track="true" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,300,100,900' rel='stylesheet' type='text/css'>
+  <script src="assets/application-cal.js" data-turbolinks-track="true"></script>
+  <script src="https://use.fontawesome.com/3e6dfd3a40.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+  <meta name="csrf-param" content="authenticity_token" />
+  <meta name="csrf-token" content="NhzcfNRuQ0wp+47oI4zB/lMl+pfXhMrJpPKbK/5Eyeb/tFNfjgDNTXTPxHNJMj5PWTF/dZAx5HFvwK3YVn56kg==" />
+  <link rel="stylesheet" href="assets/usoGeneral.css">
+  <link rel="stylesheet" href="assets/score.css">
+</head>
+
+<body class="mainbody">
+  <nav class="main_menu navbar-default" role="navigation">
+    <div class='espacioMenuPrincipal'>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle botonTresRayas" data-toggle="collapse" data-target="#nav-primary">
+            <span class="sr-only">Desplegar navegacion</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand logo"  href="#"><img src="assets/ligateca_logo_naranja.svg" alt="Ligateca logo naranja" /></a>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-ex1-collapse menuAbierto" id="nav-primary" style="margin-bottom: 0px">
+        <ul class="nav navbar-nav">
+         <li><a class="main_menu_links" href="/league">Mis Ligas</a></li>
+         <li><a class="main_menu_links" href="/league/new">Crear Liga</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right ">
+          <li>
+            <li>
+              <a href='/requests/33/see_new_requests' class='menuLink'>
+                <i class='zmdi zmdi-hc-2x zmdi-notifications-none iconoBlanco'></i>
+              </a>
+            </li>
+          </li>
+          <li class="dropdown menuSize">
+            <a href="#" class="dropdown-toggle menuLink fondoTransparente" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" >
+              <i class="zmdi zmdi-hc-2x zmdi-account-circle zmdi-hc-fw iconoBlanco"></i>
+            </a>
+            <ul class="dropdown-menu opcionesPerfil">
+              <li><a href="/player/33/edit_profile">Perfil</a></li>
+              <li><a href="/users/edit">Cambiar contraseña</a></li>
+              <li><a rel="nofollow" data-method="delete" href="/users/sign_out">Salir</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <form class="navbar-form navbar-right" role="search" action="/league/search_result" method="post" id="search_form">
+          <div class="input-group">
+            <input type="text" name="search_key"  class="form-control search_field" placeholder="Buscar... ">
+              <span class="input-group-btn">
+                <button class="btn search_button search_icon" type="button">
+                  <span class="glyphicon glyphicon-search lupa"></span>
+                </button>
+              </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="sub_menu navbar-default" role="navigation">
+
+    <div class='espacioMenuPrincipal  menuLiga'>
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle buttonSubMenu" data-toggle="collapse" data-target="#nav-secondary" aria-expanded="false">
+          <span class="sr-only">Desplegar navegacion</span>
+          <span>Inicio</span>
+          <i class="fa fa-caret-down toc" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-ex1-collapse" id="nav-secondary">
+        <ul class="nav navbar-nav">
+          <li><a class="sub_menu_links" href="/league/copa_america%202015">Inicio</a></li>
+          <li><a class="sub_menu_links" href="/league/copa_america%202015/teams">Equipos</a></li>
+          <li><a class="sub_menu_links" href="/league/copa_america%202015/stats">Estadísticas</a></li>
+          <li><a class="sub_menu_links" href="/league/copa_america%202015/standings">Posiciones</a></li>
+          <li>
+            <li class="dropdown ">
+              <a href="#" class="dropdown-toggle sub_menu_links" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Calendario
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="/league/copa_america%202015/match">Fase de Grupos</a></li>
+                <li><a href="/match/copa_america%202015/show_playoff_brackets">Eliminatorias</a></li>
+              </ul>
+            </li>
+          </li>
+          <li><a class="sub_menu_links" href="/league/copa_america%202015/post">Noticias</a></li>
+          <li><a class="sub_menu_links" href="/league/copa_america%202015/album">Fotos</a> </li>
+          <li><a class="sub_menu_links" href="/league/copa_america%202015/permission">Permisos</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+
+
+  <div class="espacioGeneral">
+
+    <!-- PANEL DE INFO LIGA -->
+    <div class="panelLiga shadow">
+      <div class="espacioLogoLiga">
+        <img src="assets/league_logo_50.png" alt="Logo de Liga">
+      </div>
+      <div class="espacioNombreLiga">
+        <span>Liga Andrei Ivan Plotnikoff Cuevas</span>
+      </div>
+    </div>
+    <!-- FIN DE PANEL DE INFO LIGA -->
+
+    <!-- CUERPO DE SCORES -->
+    <div class="seccionLigateca margenAbajoSeccion shadow">
+      <div class="tituloSeccionLigateca">
+        <div class="textoTituloSeccion">
+          <span>Editar Resultado</span>
+        </div>
+      </div>
+      <div class="lineaDivisoriaAzul"></div>
+
+      <div class="cuerpoScore">
+
+        <!-- EQUIPO 1 -->
+        <div class="equipo1Score">
+
+          <div class="espacioEquipoScore">
+            <span>Atletico Roman</span>
+            <span class="resultadoEquipo">0</span>
+          </div>
+
+          <div class="espacioIngresoDatos">
+            <div class="espacioIngresoStats">
+              <div class="ingresoGoles dropdownActivar" data-toggle="collapse" data-parent="#accordion" href="#collapseGol1">
+                <span>Gol</span>
+              </div>
+            </div>
+            <div class="espacioIngresoStats">
+              <div class="ingresoAsist dropdownActivar" data-toggle="collapse" data-parent="#accordion" href="#collapseAsist1">
+                <span>Asist</span>
+              </div>
+            </div>
+            <div class="espacioIngresoStats">
+              <div class="ingresoTarjetas dropdownActivar" data-toggle="collapse" data-parent="#accordion" href="#collapseTarjeta1">
+                <span>Tarjeta</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- FIN EQUIPO 1 -->
+
+        <!-- ACORDEON GOLES -->
+          <div id="collapseGol1" class="panel-collapse collapse">
+
+            <!-- LINEA JUGADOR -->
+            <div class="lineaJugadorAgregarStat">
+              <div class="nombreJugadorAgregarStat">
+                <span>10</span>
+                <span>
+                  Andrei Plotnikoff
+                </span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoAgregarStat dropdownActivar">
+                  <span>+</span>
+                </div>
+              </div>
+              <div class="espacioStatActual">
+                <span>Goles</span>
+                <span>0</span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoReducirStat dropdownActivar">
+                  <span>-</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- LINEA JUGADOR -->
+            <div class="lineaJugadorAgregarStat">
+              <div class="nombreJugadorAgregarStat">
+                <span>11</span>
+                <span>
+                  Adrian Plotnikoff
+                </span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoAgregarStat dropdownActivar">
+                  <span>+</span>
+                </div>
+              </div>
+              <div class="espacioStatActual">
+                <span>Goles</span>
+                <span>0</span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoReducirStat dropdownActivar">
+                  <span>-</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- LINEA JUGADOR -->
+            <div class="lineaJugadorAgregarStat">
+              <div class="nombreJugadorAgregarStat">
+                <span>7</span>
+                <span>
+                  Valeria Torrazza
+                </span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoAgregarStat dropdownActivar">
+                  <span>+</span>
+                </div>
+              </div>
+              <div class="espacioStatActual">
+                <span>Goles</span>
+                <span>0</span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoReducirStat dropdownActivar">
+                  <span>-</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- LINEA JUGADOR -->
+            <div class="lineaJugadorAgregarStat">
+              <div class="nombreJugadorAgregarStat">
+                <span>13</span>
+                <span>
+                  Isabella Caballero
+                </span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoAgregarStat dropdownActivar">
+                  <span>+</span>
+                </div>
+              </div>
+              <div class="espacioStatActual">
+                <span>Goles</span>
+                <span>0</span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoReducirStat dropdownActivar">
+                  <span>-</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- LINEA JUGADOR -->
+            <div class="lineaJugadorAgregarStat">
+              <div class="nombreJugadorAgregarStat">
+                <span>14</span>
+                <span>
+                  Diego Felicio Caballero
+                </span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoAgregarStat dropdownActivar">
+                  <span>+</span>
+                </div>
+              </div>
+              <div class="espacioStatActual">
+                <span>Goles</span>
+                <span>0</span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoReducirStat dropdownActivar">
+                  <span>-</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- LINEA JUGADOR -->
+            <div class="lineaJugadorAgregarStat">
+              <div class="nombreJugadorAgregarStat">
+                <span>15</span>
+                <span>
+                  Nicolas Cucalon
+                </span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoAgregarStat dropdownActivar">
+                  <span>+</span>
+                </div>
+              </div>
+              <div class="espacioStatActual">
+                <span>Goles</span>
+                <span>0</span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoReducirStat dropdownActivar">
+                  <span>-</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- LINEA JUGADOR -->
+            <div class="lineaJugadorAgregarStat">
+              <div class="nombreJugadorAgregarStat">
+                <span>16</span>
+                <span>
+                  Camila Quintero
+                </span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoAgregarStat dropdownActivar">
+                  <span>+</span>
+                </div>
+              </div>
+              <div class="espacioStatActual">
+                <span>Goles</span>
+                <span>0</span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoReducirStat dropdownActivar">
+                  <span>-</span>
+                </div>
+              </div>
+            </div>
+
+          </div> <!-- CIERRA ID collapseGol1 -->
+
+          <!-- ACORDEON ASISTENCIAS -->
+          <div id="collapseAsist1" class="panel-collapse collapse">
+
+            <!-- LINEA JUGADOR -->
+            <div class="lineaJugadorAgregarStat">
+              <div class="nombreJugadorAgregarStat">
+                <span>10</span>
+                <span>
+                  Andrei Plotnikoff
+                </span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoAgregarStat dropdownActivar">
+                  <span>+</span>
+                </div>
+              </div>
+              <div class="espacioStatActual">
+                <span>Asistencias</span>
+                <span>0</span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoReducirStat dropdownActivar">
+                  <span>-</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- LINEA JUGADOR -->
+            <div class="lineaJugadorAgregarStat">
+              <div class="nombreJugadorAgregarStat">
+                <span>11</span>
+                <span>
+                  Adrian Plotnikoff
+                </span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoAgregarStat dropdownActivar">
+                  <span>+</span>
+                </div>
+              </div>
+              <div class="espacioStatActual">
+                <span>Asistencias</span>
+                <span>0</span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoReducirStat dropdownActivar">
+                  <span>-</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- LINEA JUGADOR -->
+            <div class="lineaJugadorAgregarStat">
+              <div class="nombreJugadorAgregarStat">
+                <span>7</span>
+                <span>
+                  Valeria Torrazza
+                </span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoAgregarStat dropdownActivar">
+                  <span>+</span>
+                </div>
+              </div>
+              <div class="espacioStatActual">
+                <span>Asistencias</span>
+                <span>0</span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoReducirStat dropdownActivar">
+                  <span>-</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- LINEA JUGADOR -->
+            <div class="lineaJugadorAgregarStat">
+              <div class="nombreJugadorAgregarStat">
+                <span>13</span>
+                <span>
+                  Isabella Caballero
+                </span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoAgregarStat dropdownActivar">
+                  <span>+</span>
+                </div>
+              </div>
+              <div class="espacioStatActual">
+                <span>Asistencias</span>
+                <span>0</span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoReducirStat dropdownActivar">
+                  <span>-</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- LINEA JUGADOR -->
+            <div class="lineaJugadorAgregarStat">
+              <div class="nombreJugadorAgregarStat">
+                <span>14</span>
+                <span>
+                  Diego Felicio Caballero
+                </span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoAgregarStat dropdownActivar">
+                  <span>+</span>
+                </div>
+              </div>
+              <div class="espacioStatActual">
+                <span>Asistencias</span>
+                <span>0</span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoReducirStat dropdownActivar">
+                  <span>-</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- LINEA JUGADOR -->
+            <div class="lineaJugadorAgregarStat">
+              <div class="nombreJugadorAgregarStat">
+                <span>15</span>
+                <span>
+                  Nicolas Cucalon
+                </span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoAgregarStat dropdownActivar">
+                  <span>+</span>
+                </div>
+              </div>
+              <div class="espacioStatActual">
+                <span>Asistencias</span>
+                <span>0</span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoReducirStat dropdownActivar">
+                  <span>-</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- LINEA JUGADOR -->
+            <div class="lineaJugadorAgregarStat">
+              <div class="nombreJugadorAgregarStat">
+                <span>16</span>
+                <span>
+                  Camila Quintero
+                </span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoAgregarStat dropdownActivar">
+                  <span>+</span>
+                </div>
+              </div>
+              <div class="espacioStatActual">
+                <span>Asistencias</span>
+                <span>0</span>
+              </div>
+              <div class="espacioAgregarReducir">
+                <div class="iconoReducirStat dropdownActivar">
+                  <span>-</span>
+                </div>
+              </div>
+            </div>
+
+          </div> <!-- CIERRA ID collapseAsist1 -->
+
+          <!-- ACORDEON TARJETAS -->
+          <div id="collapseTarjeta1" class="panel-collapse collapse">
+
+            <!-- LINEA JUGADOR -->
+            <div class="lineaJugadorAgregarStat lineaTarjeta">
+              <div class="nombreJugadorAgregarStat">
+                <span>10</span>
+                <span>Andrei Plotnikoff</span>
+              </div>
+              <div class="agregarTarjeta">
+                <div class="espacioAmarillaRoja">
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoAgregarStat aStatChico dropdownActivar">
+                      <span>+</span>
+                    </div>
+                  </div>
+                  <div class="espacioStatActual actualChico">
+                    <span>Amarilla</span>
+                    <span>0</span>
+                  </div>
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoReducirStat aStatChico dropdownActivar">
+                      <span>-</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="espacioAmarillaRoja">
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoAgregarStat aStatChico dropdownActivar">
+                      <span>+</span>
+                    </div>
+                  </div>
+                  <div class="espacioStatActual actualChico">
+                    <span>Roja</span>
+                    <span>0</span>
+                  </div>
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoReducirStat aStatChico dropdownActivar">
+                      <span>-</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+                        <!-- LINEA JUGADOR -->
+            <div class="lineaJugadorAgregarStat lineaTarjeta">
+              <div class="nombreJugadorAgregarStat">
+                <span>11</span>
+                <span>Adrian Plotnikoff</span>
+              </div>
+              <div class="agregarTarjeta">
+                <div class="espacioAmarillaRoja">
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoAgregarStat aStatChico dropdownActivar">
+                      <span>+</span>
+                    </div>
+                  </div>
+                  <div class="espacioStatActual actualChico">
+                    <span>Amarilla</span>
+                    <span>0</span>
+                  </div>
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoReducirStat aStatChico dropdownActivar">
+                      <span>-</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="espacioAmarillaRoja">
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoAgregarStat aStatChico dropdownActivar">
+                      <span>+</span>
+                    </div>
+                  </div>
+                  <div class="espacioStatActual actualChico">
+                    <span>Roja</span>
+                    <span>0</span>
+                  </div>
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoReducirStat aStatChico dropdownActivar">
+                      <span>-</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+                        <!-- LINEA JUGADOR -->
+            <div class="lineaJugadorAgregarStat lineaTarjeta">
+              <div class="nombreJugadorAgregarStat">
+                <span>7</span>
+                <span>Valeria Torrazza</span>
+              </div>
+              <div class="agregarTarjeta">
+                <div class="espacioAmarillaRoja">
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoAgregarStat aStatChico dropdownActivar">
+                      <span>+</span>
+                    </div>
+                  </div>
+                  <div class="espacioStatActual actualChico">
+                    <span>Amarilla</span>
+                    <span>0</span>
+                  </div>
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoReducirStat aStatChico dropdownActivar">
+                      <span>-</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="espacioAmarillaRoja">
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoAgregarStat aStatChico dropdownActivar">
+                      <span>+</span>
+                    </div>
+                  </div>
+                  <div class="espacioStatActual actualChico">
+                    <span>Roja</span>
+                    <span>0</span>
+                  </div>
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoReducirStat aStatChico dropdownActivar">
+                      <span>-</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+                        <!-- LINEA JUGADOR -->
+            <div class="lineaJugadorAgregarStat lineaTarjeta">
+              <div class="nombreJugadorAgregarStat">
+                <span>13</span>
+                <span>Isabella Caballero</span>
+              </div>
+              <div class="agregarTarjeta">
+                <div class="espacioAmarillaRoja">
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoAgregarStat aStatChico dropdownActivar">
+                      <span>+</span>
+                    </div>
+                  </div>
+                  <div class="espacioStatActual actualChico">
+                    <span>Amarilla</span>
+                    <span>0</span>
+                  </div>
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoReducirStat aStatChico dropdownActivar">
+                      <span>-</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="espacioAmarillaRoja">
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoAgregarStat aStatChico dropdownActivar">
+                      <span>+</span>
+                    </div>
+                  </div>
+                  <div class="espacioStatActual actualChico">
+                    <span>Roja</span>
+                    <span>0</span>
+                  </div>
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoReducirStat aStatChico dropdownActivar">
+                      <span>-</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+                        <!-- LINEA JUGADOR -->
+            <div class="lineaJugadorAgregarStat lineaTarjeta">
+              <div class="nombreJugadorAgregarStat">
+                <span>14</span>
+                <span>Diego Felicio Caballero</span>
+              </div>
+              <div class="agregarTarjeta">
+                <div class="espacioAmarillaRoja">
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoAgregarStat aStatChico dropdownActivar">
+                      <span>+</span>
+                    </div>
+                  </div>
+                  <div class="espacioStatActual actualChico">
+                    <span>Amarilla</span>
+                    <span>0</span>
+                  </div>
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoReducirStat aStatChico dropdownActivar">
+                      <span>-</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="espacioAmarillaRoja">
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoAgregarStat aStatChico dropdownActivar">
+                      <span>+</span>
+                    </div>
+                  </div>
+                  <div class="espacioStatActual actualChico">
+                    <span>Roja</span>
+                    <span>0</span>
+                  </div>
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoReducirStat aStatChico dropdownActivar">
+                      <span>-</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+                        <!-- LINEA JUGADOR -->
+            <div class="lineaJugadorAgregarStat lineaTarjeta">
+              <div class="nombreJugadorAgregarStat">
+                <span>15</span>
+                <span>Nicolas Cucalon</span>
+              </div>
+              <div class="agregarTarjeta">
+                <div class="espacioAmarillaRoja">
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoAgregarStat aStatChico dropdownActivar">
+                      <span>+</span>
+                    </div>
+                  </div>
+                  <div class="espacioStatActual actualChico">
+                    <span>Amarilla</span>
+                    <span>0</span>
+                  </div>
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoReducirStat aStatChico dropdownActivar">
+                      <span>-</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="espacioAmarillaRoja">
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoAgregarStat aStatChico dropdownActivar">
+                      <span>+</span>
+                    </div>
+                  </div>
+                  <div class="espacioStatActual actualChico">
+                    <span>Roja</span>
+                    <span>0</span>
+                  </div>
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoReducirStat aStatChico dropdownActivar">
+                      <span>-</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+                        <!-- LINEA JUGADOR -->
+            <div class="lineaJugadorAgregarStat lineaTarjeta">
+              <div class="nombreJugadorAgregarStat">
+                <span>16</span>
+                <span>Camila Quintero</span>
+              </div>
+              <div class="agregarTarjeta">
+                <div class="espacioAmarillaRoja">
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoAgregarStat aStatChico dropdownActivar">
+                      <span>+</span>
+                    </div>
+                  </div>
+                  <div class="espacioStatActual actualChico">
+                    <span>Amarilla</span>
+                    <span>0</span>
+                  </div>
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoReducirStat aStatChico dropdownActivar">
+                      <span>-</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="espacioAmarillaRoja">
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoAgregarStat aStatChico dropdownActivar">
+                      <span>+</span>
+                    </div>
+                  </div>
+                  <div class="espacioStatActual actualChico">
+                    <span>Roja</span>
+                    <span>0</span>
+                  </div>
+                  <div class="espacioAgregarReducirChico">
+                    <div class="iconoReducirStat aStatChico dropdownActivar">
+                      <span>-</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div> <!-- CIERRA ID collapseTarjeta1 -->
+          <!-- FIN DE ACORDEONES -->
+
+        <!-- EQUIPO 2 -->
+        <div class="equipo1Score">
+
+          <div class="espacioEquipoScore">
+            <span>Inmortales United</span>
+            <span class="resultadoEquipo">0</span>
+          </div>
+
+          <div class="espacioIngresoDatos">
+            <div class="espacioIngresoStats">
+              <div class="ingresoGoles dropdownActivar" data-toggle="collapse" data-parent="#accordion" href="#collapseGol2">
+                <span>Gol</span>
+              </div>
+            </div>
+            <div class="espacioIngresoStats">
+              <div class="ingresoAsist dropdownActivar" data-toggle="collapse" data-parent="#accordion" href="#collapseAsist2">
+                <span>Asist</span>
+              </div>
+            </div>
+            <div class="espacioIngresoStats">
+              <div class="ingresoTarjetas dropdownActivar" data-toggle="collapse" data-parent="#accordion" href="#collapseTarjeta2">
+                <span>Tarjeta</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- FIN EQUIPO 2 -->
+
+        <!-- ACORDEON GOLES -->
+          <div id="collapseGol2" class="panel-collapse collapse">
+            <div class="contenidoNoticia">
+              <span>
+                Gol
+              </span>
+              <span class="fechaNoticia">
+                2-feb-2017
+              </span>
+            </div>
+          </div>
+
+          <!-- ACORDEON ASISTENCIAS -->
+          <div id="collapseAsist2" class="panel-collapse collapse">
+            <div class="contenidoNoticia">
+              <span>
+                Asistencia
+              </span>
+              <span class="fechaNoticia">
+                2-feb-2017
+              </span>
+            </div>
+          </div>
+
+          <!-- ACORDEON TARJETAS -->
+          <div id="collapseTarjeta2" class="panel-collapse collapse">
+            <div class="contenidoNoticia">
+              <span>
+                Tarjeta
+              </span>
+              <span class="fechaNoticia">
+                2-feb-2017
+              </span>
+            </div>
+          </div>
+          <!-- FIN DE ACORDEONES -->
+
+
+
+      </div> <!-- CIERRA CLASE CUERPOSCORES -->
+    </div> <!-- CIERRA CLASE SECCIONLIGATECA -->
+    <!-- FIN CUERPO DE SCORES -->
+
+
+
+  </div><!-- Cierra class espacioGeneral -->
+
+</body>
+</html>
