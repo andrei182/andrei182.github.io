@@ -3,6 +3,28 @@
     height: auto;
 }
 
+.espacioGuardarCambio {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonVerdeScore {
+    padding: 0;
+}
+
+.botonVerdeGuardar {
+    background-color: #58b957;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 7px 12px;
+    border-radius: 3px;
+    font-family: "Roboto";
+}
+
 .equipo1Score {
     width: 100%;
     height: auto;
@@ -35,7 +57,6 @@
 .espacioEquipoScore .resultadoEquipo {
     font-size: 36px;
     line-height: 1em;
-    height: 100%;
 }
 
 .espacioIngresoDatos {
@@ -96,6 +117,12 @@
     font-size: 14px;
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.lineaJugadorAgregarStat a,
+.lineaJugadorAgregarStat a:hover {
+    text-decoration: none;
 }
 
 .lineaTarjeta {
@@ -198,6 +225,14 @@
     display: flex;
     align-items: center;
 }
+
+.botonScoreAgregarJugador {
+    background-color: #81ef81;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
 
 
 @media screen and (max-width: 414px) {

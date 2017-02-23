@@ -1,0 +1,88 @@
+.cuerpoMisLigas {
+    width: 100%;
+    height: auto;
+}
+
+.lineaMisLigas {
+    width: 100%;
+    height: auto;
+    min-height: 60px;
+    border-bottom: 1px solid #DDDDDD;
+    display: flex;
+    align-items: center;
+}
+
+.anchoVeinte {
+    width: 20%;
+    text-decoration: none;
+}
+
+.anchoSesenta {
+    width: 60%;
+    text-decoration: none;
+}
+
+.anchoSesenta:hover {
+    text-decoration: none;
+}
+
+.misLigasEspacioLogo {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.misLigasEspacioLogo img {
+	margin: 0;
+	width: 80%;
+	max-width: 50px;
+}
+
+.misLigasEspacioInfo {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	padding-left: 10px;
+    color: black;
+}
+
+.misLigasInfoNombreLiga {
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.misLigasInfoDeporte {
+    font-size: 10px;
+    color: #6B6B6B;
+}
+
+.misLigasInfoRoles {
+    font-size: 10px;
+}
+
+.misLigasEspacioBotones {
+	width: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.misLigasEspacioBotones a:hover {
+    text-decoration: none;
+}
+
+.botonSettings {
+	color: #9c9c9c;
+    font-size: 22px;
+    height: 35px;
+    width: 35px;
+    margin: 2px;
+    border-radius: 50%;
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

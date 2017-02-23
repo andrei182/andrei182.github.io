@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ligateca</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" media="all" href="assets/applicationinicio.css" data-turbolinks-track="true" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,300,100,900' rel='stylesheet' type='text/css'>
+  <script src="assets/applicationinicio.js" data-turbolinks-track="true"></script>
+  <script src="https://use.fontawesome.com/3e6dfd3a40.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+  <meta name="csrf-param" content="authenticity_token" />
+  <meta name="csrf-token" content="lijbUvI3wLc8iY2EY/uUuP563gu+GLq1A0FtGnf2k+/g20v1V7GgNEca2v27TZbdc0LDfK6EtadV2848szn6YA==" />
+  <link rel="stylesheet" href="assets/usoGeneral.css">
+</head>
+
+<body class="mainbody">
+
+  <nav class="main_menu navbar-default" role="navigation">
+    <div class='espacioMenuPrincipal'>
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle botonTresRayas" data-toggle="collapse" data-target="#nav-primary">
+          <span class="sr-only">Desplegar navegacion</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand logo"  href="#">
+          <img src="assets/ligateca_logo_naranja.svg" alt="Ligateca logo naranja" />
+          </a>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-ex1-collapse menuAbierto" id="nav-primary" style="margin-bottom: 0px">
+        <ul class="nav navbar-nav">
+         <li><a class="main_menu_links" href="/league">Mis Ligas</a></li>
+         <li><a class="main_menu_links" href="/league/new">Crear Liga</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right ">
+          <li>
+            <li>
+              <a href='/requests/33/see_new_requests' class='menuLink'>
+                <i class='zmdi zmdi-hc-2x zmdi-notifications-none iconoBlanco'></i>
+              </a>
+            </li>
+          </li>
+          <li class="dropdown menuSize">
+            <a href="#" class="dropdown-toggle menuLink fondoTransparente" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" >
+              <i class="zmdi zmdi-hc-2x zmdi-account-circle zmdi-hc-fw iconoBlanco"></i>
+            </a>
+            <ul class="dropdown-menu opcionesPerfil">
+              <li><a href="/player/33/edit_profile">Perfil</a></li>
+              <li><a href="/users/edit">Cambiar contraseña</a></li>
+              <li><a rel="nofollow" data-method="delete" href="/users/sign_out">Salir</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <form class="navbar-form navbar-right" role="search" action="/league/search_result" method="post" id="search_form">
+          <div class="input-group">
+            <input type="text" name="search_key"  class="form-control search_field" placeholder="Buscar... ">
+            <span class="input-group-btn">
+              <button class="btn search_button search_icon" type="button">
+                <span class="glyphicon glyphicon-search lupa"></span>
+              </button>
+            </span>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </nav>
+
+
+
+  <div class="espacioGeneral">
+
+    <!-- PANEL -->
+    <div class="panelMultiuso">
+         
+      <div class="tituloPanelMultiuso">
+        <span>Permiso Denegado</span>
+      </div>
+
+      <div class="cuerpoPanelMultiuso">
+
+        <div class="espacioTextoAnuncio">
+          <span>La liga a la cual ha intentado acceder es privada. Solicite permiso para ingresar.</span>
+          <a href="#">
+            <span>Atrás</span>
+          </a>
+        </div>
+
+        <div class="espacioBotonesPanelMultiuso">
+          <a href="#">
+            <div class="botonVerdePanelMultiuso">
+              <span>Solicitar Permiso</span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+
+    </div>
+    <!-- FIN DE PANEL DE INFO LIGA -->
+
+    
+
+
+
+
+
+  </div>
+</body>
+</html>
