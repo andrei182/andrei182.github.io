@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ligateca</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" media="all" href="assets/applicationinicio.css" data-turbolinks-track="true" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,300,100,900' rel='stylesheet' type='text/css'>
+  <script src="assets/applicationinicio.js" data-turbolinks-track="true"></script>
+  <script src="https://use.fontawesome.com/3e6dfd3a40.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+  <meta name="csrf-param" content="authenticity_token" />
+  <meta name="csrf-token" content="lijbUvI3wLc8iY2EY/uUuP563gu+GLq1A0FtGnf2k+/g20v1V7GgNEca2v27TZbdc0LDfK6EtadV2848szn6YA==" />
+  <link rel="stylesheet" href="assets/normalize.css">
+  <link rel="stylesheet" href="assets/barrasNav.css">
+  <link rel="stylesheet" href="assets/usoGeneral.css">
+  <link rel="stylesheet" href="assets/editTeam.css">
+</head>
+
+<body>
+
+  <nav class="menuLigatecaPrincipal">
+    <div class="contenidoMenuLigateca">
+
+      <div class="logoMenuLigateca">
+        <a href="#">
+          <img src="assets/ligateca_logo_naranja.svg" alt="Ligateca logo naranja" />
+        </a>
+      </div>
+
+      <div class="linksMenuLigateca">
+        <a href="#"><span>Mis Ligas</span></a>
+        <a href="#"><span>Crear Liga</span></a>
+      </div>
+
+      <div class="buscadorMenuLigateca">
+        <input type="text" class="formularioBuscadorMenuLigateca" placeholder="Buscar... ">
+        <a href="#">
+          <div class="botonLupaMenuLigateca">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </div>
+        </a>
+      </div>
+
+      <div class="iconosMenuLigateca">
+        <a href="#"><i class="zmdi zmdi-notifications"></i></a>
+        <a href="#" data-toggle="dropdown"><i class="zmdi zmdi-account-circle"></i></a>
+        <ul class="dropdown-menu dropdownProfileIcon">
+          <li><a href="#">Perfil</a></li>
+          <li><a href="#">Cambiar Contraseña</a></li>
+          <li><a href="#">Salir</a></li>
+        </ul>
+      </div>
+
+      <div class="barrasMenuLigateca" data-toggle="collapse" href="#menuPrincipalAbierto">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </div>
+
+    </div>
+  </nav>
+  <div id="menuPrincipalAbierto" class="panel-collapse collapse">
+    <div class="menuPrincipalVertical">
+      <a href="#"><div class="menuPrincipalVerticalDiv"><span>Mis Ligas</span></div></a>
+      <a href="#"><div class="menuPrincipalVerticalDiv"><span class="azulClaro">Crear Liga</span></div></a>
+      <a href="#"><i class="zmdi zmdi-notifications"></i></a>
+      <a href="#"><div data-toggle="collapse" href="#menuProfileIcon"><i class="zmdi zmdi-account-circle azulClaro"></i></div></a>
+      <div id="menuProfileIcon" class="panel-collapse collapse">
+        <a href="#"><div><span>Perfil</span></div></a>
+        <a href="#"><div><span>Cambiar Contraseña</span></div></a>
+        <a href="#"><div><span>Salir</span></div></a>
+      </div>
+      <div class="lineaBuscadorVertical">
+        <input type="text" class="formularioBuscadorVertical" placeholder="Buscar... ">
+        <a href="#">
+          <div class="botonLupaMenuLigatecaVertical">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="espacioGeneral">
+
+    <!-- PANEL DE INFO LIGA -->
+    <div class="panelLiga shadow">
+      <div class="espacioLogoLiga">
+        <img src="assets/league_logo_50.png" alt="Logo de Liga">
+      </div>
+      <div class="espacioNombreLiga">
+        <span>Liga Andrei Ivan Plotnikoff Cuevas</span>
+      </div>
+    </div>
+    <!-- FIN DE PANEL DE INFO LIGA -->
+
+    <!-- EDITAR EQUIPO -->
+    <div class="seccionLigateca margenAbajoSeccion shadow">
+      <div class="tituloSeccionLigateca prEditTeam">
+
+        <div class="textoTituloSeccion mrautoEditTeam">
+          <span>Editar Equipo</span>
+        </div>
+
+        <div class="inputTeamEditFieldSelect">
+          <select>
+            <option value="1">Equipo 1</option>
+            <option value="2">Equipo 2</option>
+            <option value="3">Equipo 3</option>
+          </select>
+        </div>
+
+      </div>
+      <div class="lineaDivisoriaAzul"></div>
+
+      <div class="cuerpoEditTeam">
+
+        <div class="lineaEditTeam">
+          <div class="textoEditTeam">
+            <span>Nombre de Equipo:</span>
+          </div>
+          <div class="fieldTextoEditTeam">
+            <input type="text">
+          </div>
+        </div>
+        <div class="espacioEditTeamInvalido">
+          <div class="espacioIzqInvalido"></div>
+          <div class="editTeamInvalido">
+            <span>Nombre de equipo ya existe en esta liga</span>
+          </div>
+        </div>
+
+        <div class="lineaEditTeam">
+          <div class="textoEditTeam">
+            <span>Logo de Equipo:</span>
+          </div>
+          <div class="espacioSubirLogo">
+            <a href="#">
+              <div class="botonSubirLogo">
+                <span>Escoger Foto</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="lineaEditTeam">
+          <div class="textoEditTeam">
+            <span>Representante de Equipo:</span>
+          </div>
+          <div class="espacioSubirLogo">
+            <a href="#">
+              <div class="botonSubirLogo">
+                <span>Agregar Representante</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="lineaEditTeam">
+          <div class="textoEditTeam"></div>
+          <div class="espacioFieldIcono">
+
+            <div class="fieldTextoEditTeam fieldAgregarRep">
+              <input type="text">
+            </div>
+            <div class="borrarRep">
+              <a href="#">
+                <div class="iconoBorrarRep">
+                  <i class="zmdi zmdi-close-circle"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="espacioLogoEditTeam">
+          <img src="assets/league_logo_200.png">
+        </div>
+
+        <div class="guardarEditTeam">
+          <a href="#">
+            <div class="botonGuardarEditTeam">
+              <span>Guardar Cambios</span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+      <!-- FIN EDITAR EQUIPO -->
+
+      <!-- ESPACIO JUGADORES -->
+
+      <div class="editTeamEspacioJugadores">
+
+        <div class="editTeamJugadoresTitulo">
+          <span>Jugadores</span>
+        </div>
+
+
+        <div class="jugadoresEditTeam">
+
+          <!-- JUGADOR 1 -->
+          <div class="editTeamJugador">
+
+            <div class="editJugador">
+              <input type="text" name="" placeholder="Nombre">  
+            </div>
+            <div class="sepEditJugador"></div>
+            <div class="editJugador">
+              <input type="text" name="" placeholder="Apellido">  
+            </div>
+            <div class="sepEditJugador"></div>
+            <div class="editJugador">
+              <input type="text" name="" placeholder="Email">  
+            </div>
+            <div class="sepEditJugador"></div>
+            <div class="editJugadorNum">
+              <input type="text" name="" placeholder="No.">
+            </div>
+            <div class="sepEditJugador"></div>
+            <div class="editJugadorPos">
+              <select>
+                <option value="1">Arquero</option>
+                <option value="2">Defensor</option>
+                <option value="3">Mediocampista</option>
+                <option value="4">Delantero</option>
+              </select>
+            </div>
+            <div class="sepEditJugador"></div>
+            <div class="editJugadorCheck">
+              <input type="checkbox" name="">
+              <span>Capitán</span>
+            </div>
+            <div class="sepEditJugador"></div>
+            <div class="borrarJugador">
+              <a href="#">
+                <div class="iconoBorrarJugador">
+                  <i class="zmdi zmdi-close-circle"></i>
+                </div>
+              </a>
+            </div>
+
+          </div>
+
+
+
+         </div>
+
+
+      </div>
+      <!-- FIN ESPACIO JUGADORES -->
+
+    </div>
+  </div>
+
+
+</body>
+</html>

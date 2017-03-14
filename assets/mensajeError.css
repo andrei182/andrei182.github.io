@@ -1,0 +1,59 @@
+.panelError {
+	width: 90%;
+	max-width: 450px;
+	height: auto;
+	background-color: white;
+	margin-top: 25px;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px;
+	border: 5px solid #2f4858;
+	padding: 15px;
+}
+
+.tituloError {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.textoError {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	margin: 15px 0;
+	text-align: center;
+}
+
+.textoError span {
+	margin: 5px;
+}
+
+.espacioBotonVolver {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.espacioBotonVolver a,
+.espacioBotonVolver a:hover {
+	text-decoration: none;
+}
+
+.botonVolver {
+	color: white;
+	background-color: #e28b55;
+	font-weight: bold;
+	padding: 7px 12px;
+	border-radius: 3px;
+}

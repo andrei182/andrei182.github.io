@@ -1,0 +1,509 @@
+.inputTeamEditFieldSelect {
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+}
+
+.inputTeamEditFieldSelect select {
+   background: rgba(0, 0, 0, 0.005);
+   border: none;
+   font-size: 14px;
+   height: 30px;
+   width: 150px;
+   color: #585858;
+   font-weight: bold;
+   -moz-appearance: none;
+   border-radius: 5px;
+}
+
+.mrautoEditTeam {
+    margin-right: auto;
+}
+
+.prEditTeam {
+    padding-right: 25px;
+}
+
+.cuerpoEditTeam {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5px;
+}
+
+.cuerpoEditInfo {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.lineaEditTeam {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.textoEditTeam {
+    width: 30%;
+    font-size: 12px;
+    color: #787878;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.espacioSubirLogo {
+    margin-left: 10px;
+    height: 30px;
+    width: calc(100% - 80px);
+    margin-right: 10px;
+    max-width: 300px;
+}
+
+.espacioSubirLogo a,
+.espacioSubirLogo a:hover {
+    text-decoration: none;
+}
+
+.botonSubirLogo {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.botonSubirLogo span {
+    background-color: #df7e41;
+    border-radius: 3px;
+    padding: 5px 12px;
+    color: white;
+}
+
+.espacioFieldIcono {
+    width: calc(100% - 80px);
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 10px;
+    margin-right: 10px
+}
+
+.fieldTextoEditTeam {
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+    margin-left: 10px;
+    height: 30px;
+    width: calc(100% - 80px);
+    margin-right: 10px;
+    max-width: 300px;
+}
+
+.fieldTextoEditTeam input {
+    border: none;
+    border-radius: 5px;
+    padding: 0 0 0 5px;
+    height: 28px;
+    width: auto;
+    width: 100%;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.fieldAgregarRep {
+    width: 190px;
+    margin: 0;
+}
+
+.fieldAgregarRep input {
+    width: 100%;
+}
+
+.borrarRep {
+    width: 27px;
+}
+
+.borrarRep a {
+    text-decoration: none;
+}
+
+.borrarRep a:hover {
+    text-decoration: none;
+}
+
+.iconoBorrarRep {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    color: #b74250;
+}
+
+.guardarEditTeam {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.guardarEditTeam a {
+    text-decoration: none;
+}
+
+.guardarEditTeam a:hover {
+    text-decoration: none;
+}
+
+.botonVerdeGeneral {
+    background-color: #58b957;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px 12px;
+    border-radius: 3px;
+}
+
+.espacioEditTeamInvalido {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.espacioIzqInvalido {
+    width: 30%;
+}
+
+.editTeamInvalido {
+    color: red;
+    font-size: 10px;
+    margin-left: 10px;
+    width: calc(100% - 80px);
+    margin-right: 10px;
+    max-width: 300px;
+    margin-top: -5px;
+}
+
+.espacioLogoEditTeam {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.espacioLogoEditTeam img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.editTeamEspacioJugadores {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: auto;
+}
+
+.editTeamJugadoresTitulo {
+    background-color: #f7f7f7;
+    border-top: 2px solid #DDDDDD;
+    border-bottom: 2px solid #DDDDDD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    font-weight: bold;
+}
+
+.jugadoresEditTeam {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #DDDDDD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 50px;
+}
+
+.editTeamJugador {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    border-bottom: 2px solid #DDDDDD;
+}
+
+.editTeamAgregar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 10px;
+}
+
+.editTeamAgregar a,
+.editTeamAgregar a:hover {
+    text-decoration: none;
+}
+
+.editTeamJugadorInfo {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 7.5px 0 7.5px 10px;
+    width: 100%;
+}
+
+.editTeamJugadorBorrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    margin: 10px;
+}
+
+
+.sepEditJugador {
+    width: 3px;
+    height: 3px;
+}
+
+.editJugador {
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+    height: 30px;
+    min-width: 120px;
+    width: 100%;
+    max-width: 200px;
+    margin-right: 3px;
+    margin-bottom: 3px
+}
+
+.editJugador input {
+    border: none;
+    border-radius: 5px;
+    padding: 0 0 0 5px;
+    height: 28px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.editJugadorEmail {
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+    height: 30px;
+    min-width: 120px;
+    width: 100%;
+    max-width: 280px;
+    margin-right: 3px;
+}
+
+.editJugadorEmail input {
+    border: none;
+    border-radius: 5px;
+    padding: 0 0 0 5px;
+    height: 28px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.editJugadorHor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.editJugadorNum {
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+    height: 30px;
+    width: 40px;
+    min-width: 40px;
+    margin-bottom: 3px;
+}
+
+.editJugadorNum input {
+    border: none;
+    border-radius: 5px;
+    padding: 0 0 0 5px;
+    height: 28px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.editJugadorPos {
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+    height: 30px;
+    background-color: white;
+    margin-right: 3px
+}
+
+.editJugadorPos select {
+   background: rgba(0, 0, 0, 0.005);
+   border: none;
+   font-size: 14px;
+   height: 28px;
+   width: 98px;
+   color: #cccccc;
+   -moz-appearance: none;
+   border-radius: 5px;
+}
+
+.editJugadorCap {
+
+}
+
+.cmn-toggle {
+    position: absolute;
+    visibility: hidden;
+}
+.cmn-toggle + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    margin: 0;
+}
+
+input.cmn-toggle-yes-no + label {
+    padding: 2px;
+    width: 60px;
+    height: 30px;
+}
+input.cmn-toggle-yes-no + label:before,
+input.cmn-toggle-yes-no + label:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 12px;
+    text-align: center;
+    line-height: 28px;
+    font-weight: normal;
+}
+input.cmn-toggle-yes-no + label:before {
+    background-color: #dddddd;
+    content: attr(data-off);
+    backface-visibility: hidden;
+    border-radius: 5px;
+    color: #464646;
+    border: 1px solid #bfbfbf;
+}
+input.cmn-toggle-yes-no + label:after {
+    background-color: #65de73;
+    content: attr(data-on);
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid #65de73;
+}
+input.cmn-toggle-yes-no:checked + label:before {
+    transform: none;
+}
+input.cmn-toggle-yes-no:checked + label:after {
+    transform: none;
+}
+
+.editJugadorCheck {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.editJugadorCheck input {
+    margin-top: 0;
+}
+
+.editJugadorCheck span {
+    padding-left: 2px;
+    font-size: 12px;
+}
+
+.borrarJugador {
+    width: 30px;
+}
+
+.borrarJugador a,
+.borrarJugador a:hover {
+    text-decoration: none;
+}
+
+.iconoBorrarJugador {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b74250;
+}
+
+@media screen and (max-width: 340px) {
+
+    .borrarJugador {
+        width: auto;
+    }
+
+    .iconoBorrarJugador {
+        font-size: 20px;
+    }
+
+    .editJugador {
+        min-width: 100px;
+    }
+}
+
+@media screen and (min-width: 650px) {
+
+    .cuerpoEditTeam {
+        flex-flow: row;
+    }
+
+    .cuerpoEditInfo {
+        width: 70%;
+    }
+
+    .espacioLogoEditTeam {
+        width: 30%;
+    }
+
+    .editTeamJugadorInfo {
+        flex-flow: row;
+    }
+
+    .editJugadorHor {
+        justify-content: flex-start;
+    }
+
+    .editJugador {
+        margin-bottom: 0;
+    }
+
+    .editJugadorNum {
+        margin-right: 3px;
+        margin-bottom: 0;
+    }
+
+    .editJugadorEmail {
+        max-width: 200px;
+    }
+}

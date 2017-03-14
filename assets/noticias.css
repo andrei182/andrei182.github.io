@@ -66,6 +66,47 @@
     font-weight: bold;
 }
 
+.espacioEquipoBotones {
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+.botonEquipo {
+    padding: 0 5px;
+}
+
+.botonEquipo a {
+    text-decoration: none;
+}
+
+.botonEditarEquipo {
+    color: white;
+    font-size: 16px;
+    height: 35px;
+    width: 35px;
+    margin: 2px;
+    border-radius: 50%;
+    background-color: #E28B55;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonBorrarEquipo {
+    color: white;
+    font-size: 16px;
+    height: 35px;
+    width: 35px;
+    margin: 2px;
+    border-radius: 50%;
+    background-color: #b74250;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media screen and (max-width: 414px) {
 
     .espacioNoticiaFig {
