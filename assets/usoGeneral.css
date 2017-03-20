@@ -25,6 +25,19 @@
     box-shadow: none;
 }
 
+.cuerpoGeneralLigateca {
+    display: flex;
+    padding: 30px;
+}
+
+.cuerpoGeneralLigateca p {
+    text-align: justify;
+}
+
+.justIzq {
+    align-self: flex-start;
+}
+
 .panelLiga {
     width: 100%;
     height: auto;
@@ -70,6 +83,29 @@
     line-height: 1.5em;
     max-height: 3em;
 }
+
+.espacioBotonGeneral {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.espacioBotonGeneral a,
+.espacioBotonGeneral a:hover {
+    text-decoration: none;
+}
+
+.botonGeneral {
+    background-color: #58b957;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 7px 12px;
+    border-radius: 3px;
+}
+
 
 .espacioBotonVerde {
     display: flex;
@@ -302,6 +338,12 @@
 .separador10 {
     width: 10px;
 }
+
+.infoContacto {
+
+}
+
+
 @media screen and (max-width: 414px) {
 
     .espacioNombreLiga {

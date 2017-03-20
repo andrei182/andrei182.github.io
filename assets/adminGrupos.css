@@ -1,0 +1,74 @@
+.cuerpoAdminGrupos {
+    width: 100%;
+    height: auto;
+}
+
+.lineaAdminGrupos {
+    width: 100%;
+    height: auto;
+    min-height: 40px;
+    border-bottom: 1px solid #DDDDDD;
+    display: flex;
+    align-items: center;
+}
+
+.titulosAdminGrupos {
+    background-color: #DDDDDD;
+    font-weight: bold;
+}
+
+.nombreEqAdminG {
+    width: calc(100% - 65px);
+    margin-left: 10px;
+}
+
+.grupoAdminG {
+    min-width: 45px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.espacioGrupoAdminG {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    min-width: 65px;
+}
+
+.dropdownGrupoAdminG {
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+    padding-left: 0;
+    width: 45px;
+    max-width: 45px;
+    min-width: 45px;
+}
+
+.dropdownGrupoAdminG select {
+   background: rgba(0, 0, 0, 0.005);
+   border: none;
+   border-radius: 5px;
+   font-size: 12px;
+   padding-left: 10px;
+   height: 30px;
+   width: 100%;
+   max-width: 45px;
+   color: #949494;
+   font-weight: bold;
+   -moz-appearance: none;
+}
+
+@media screen and (min-width: 376px) {
+
+    .nombreEqAdminG {
+        margin-left: 25px;
+    }
+
+    .espacioGrupoAdminG,
+    .grupoAdminG {
+        width: 30%;
+        min-width: 30%;
+        margin: 0;
+    }
+}

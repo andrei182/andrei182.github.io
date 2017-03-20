@@ -1,6 +1,15 @@
+html {
+    height: 100%;
+}
+
 body {
     background-color: #e5e5e5;
+    position: relative;
+    margin: 0;
+    padding-bottom: 270px;
+    min-height: 100%;
 }
+
 
 .menuLigatecaPrincipal {
     background-color: #2f4858;
@@ -296,6 +305,83 @@ body {
     display: none;
 }
 
+.footerGeneral {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #31393e;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 35px 25px;
+}
+
+.footerGeneral a,
+.footerGeneral a:hover {
+    text-decoration: none;
+    color: white;
+}
+.footerGeneral img {
+    width: 120px;
+    opacity: 0.5;
+}
+
+.footerTxt {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.footerTxt a {
+    padding: 5px 25px 5px 0;
+}
+
+.footerTxt a span {
+    color: #dedede;
+}
+
+.footerTxt span {
+    text-align: left;
+    color: #949494;
+    padding: 15px 0 0 0;
+}
+
+.footerLinks {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.footerCo {
+    padding-top: 10px;
+}
+
+
+
+.footerLogo {
+    min-width: 120px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+    .footerTxt {
+        width: 100%;
+    }
+
+    .footerLinks {
+        flex-flow: row;
+    }
+
+    .foterLogo {
+        width: 20%;
+    }
+}
 
 @media screen and (min-width: 768px) {
 
@@ -318,10 +404,10 @@ body {
     }
 
     .menuLigasLinks {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .menuLigasLinks a,
@@ -342,4 +428,12 @@ body {
         background-color: #efefef;
     }
 
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .footer-basic-centered {
+        padding: 35px;
+    }
 }
