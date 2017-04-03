@@ -1,0 +1,113 @@
+.cuerpoPerfil {
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	padding: 10px 10px 30px 10px;
+}
+
+.infoPerfilUsuario {
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.espacioPerfilFoto {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-height: 175px;
+	max-width: 175px;
+}
+
+.espacioPerfilFoto img {
+	border-radius: 15px;
+}
+
+.espacioPerfilTexto {
+	margin: 10px 10px 0 10px;
+	text-align: center;
+	color: #585858;
+	font-size: 12px;
+}
+
+.nombreUsuarioPerfil {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.medidasUsuarioPerfil {
+	display: flex;
+	justify-content: center;
+}
+
+.alturaMedidasPerfil {
+	margin: 0 5px 0 0;
+}
+
+.statsPerfilUsuario {
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	background-color: #f7f7f7;
+	border-radius: 10px;
+	border: 1px solid #e2e2e2;
+	margin-top: 10px;
+	height: 160px;
+}
+
+.statsPerfilTitulos {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 40px;
+	border-bottom: 1px solid #e2e2e2;
+}
+
+.statsPerfilTitulos a {
+	width: 50%;
+	height: 100%;
+	text-decoration: none;
+	color: #585858;
+}
+
+.statsPerfilTitulos a:hover {
+	text-decoration: none;
+}
+
+.statsPerfilTituloOpciones {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.activado {
+	background-color: #e4e4e4;
+	border-top-left-radius: 10px;
+}
+
+
+@media screen and (min-width: 600px) {
+
+	.cuerpoPerfil {
+		padding: 25px;
+	}
+
+	.infoPerfilUsuario {
+		flex-flow: row;
+		justify-content: flex-start;
+	}
+
+	.espacioPerfilTexto {
+		text-align: left;
+		margin-top: 0;
+	}
+
+	.medidasUsuarioPerfil {
+		flex-flow: column;
+	}
+
+}

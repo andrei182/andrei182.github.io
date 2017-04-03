@@ -362,6 +362,11 @@
     .iconoVerde {
         display: flex;
     }
+
+    #colorbox {
+        max-width: 400px;
+    }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -397,6 +402,10 @@
 
     .espacioTextoAnuncio {
         padding: 25px 100px;
+    }
+
+    #colorbox{
+        max-width: 700px;
     }
 
 }
