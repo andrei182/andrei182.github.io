@@ -22,7 +22,7 @@
 }
 
 .espacioPerfilFoto img {
-	border-radius: 15px;
+	
 }
 
 .espacioPerfilTexto {
@@ -51,10 +51,9 @@
 	display: flex;
 	flex-flow: column;
 	background-color: #f7f7f7;
-	border-radius: 10px;
 	border: 1px solid #e2e2e2;
 	margin-top: 10px;
-	height: 160px;
+	height: auto;
 }
 
 .statsPerfilTitulos {
@@ -86,7 +85,118 @@
 
 .activado {
 	background-color: #e4e4e4;
-	border-top-left-radius: 10px;
+}
+
+.statsPerfilTabla {
+	font-size: 10px;
+}
+
+.statsPerfilTabla a,
+.statsPerfilTabla a:hover {
+	text-decoration: none;
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	color: #333333;
+
+}
+
+.tablaStatsLinea {
+	width: 100%;
+	height: auto;
+	min-height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0 0 0 5px;
+	border-bottom: 1px solid #e4e4e4;
+}
+
+.tablaPremiosLinea {
+	width: 100%;
+	height: auto;
+	min-height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0 5px;
+	border-bottom: 1px solid #e4e4e4;
+}
+
+.statsTitulos {
+	font-weight: bold;
+	min-height: 20px;
+}
+
+.tsNombre {
+	width: calc(50% - 40px);
+	min-width: 70px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.tsEstadistica {
+	width: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tpTitulo {
+	width: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tPremio {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: flex-end;
+	width: 30%;
+}
+
+.tpLigaEquipo {
+	width: 70%;
+	display: flex;
+	flex-flow: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.tpLiga {
+	font-weight: bold;
+}
+
+.tpEquipo {
+
+}
+
+.editarPerfil {
+    font-size: 20px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 25px;
+}
+
+.editarPerfil a,
+.editarPerfil a:hover {
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	color: #9c9c9c;
 }
 
 
@@ -108,6 +218,11 @@
 
 	.medidasUsuarioPerfil {
 		flex-flow: column;
+	}
+
+	.tablaStatsLinea,
+	.tablaPremiosLinea {
+		padding: 0 20px 0 10px;
 	}
 
 }
