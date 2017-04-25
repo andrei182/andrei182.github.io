@@ -11,6 +11,10 @@
     justify-content: center;
 }
 
+.espacioPenales {
+    width: 100%;
+}
+
 .botonVerdeScore {
     padding: 0;
 }
@@ -166,7 +170,7 @@
 }
 
 .iconoAgregarStat span {
-    line-height: 1em;
+    line-height: 40px;
     height: 100%;
 }
 
@@ -233,7 +237,60 @@
     border-radius: 5px;
 }
 
+.lineaPenales {
+    background-color: white;
+}
 
+.lineaPenales .nombreJugadorAgregarStat {
+    margin-left: -20px;
+    font-size: 12px;
+}
+
+.lineaForfeit {
+    border-bottom: 1px solid #DDDDDD;
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forfeitEquipo {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.espacioBotonForfeit {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botonForfeit {
+    background-color: #dddddd;
+    height: 35px;
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #bfbfbf;
+    color: #464646;
+}
+
+.forfeitActivado {
+    color: white;
+    background-color: #b31010;
+    border: 1px solid #b31010;
+}
 
 @media screen and (max-width: 414px) {
 
