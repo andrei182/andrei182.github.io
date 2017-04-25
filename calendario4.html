@@ -110,38 +110,41 @@
   </nav>
 
 
-  <div class="bodyContainer">
-
-    <div class="containerBody">
+  <div class="espacioGeneral">
 
 
 
-        <div class="equipos-grupo shadow secciones">
-          <div class="equipos-tituloGrupo container espacioTituloInfo">
-            <div class="tituloLiga">
-              <img src="http://ligateca.com/assets/league_logo_50.png" alt="League Logo" />
-              <span>Liga Andrei</span>
-            </div>
-            <div class="espacioAdmGrupos">
-              <a id="A" class="btn league_team_setup_groups botonAdmGrupos" role="button" href="/league/liga_andrei/teams_order">
-                <div class="textoBotonAdm">
-                  <span>Editar Calendario</span>
-                </div>
-              </a>
-            </div>
+
+    <!-- PANEL DE INFO LIGA -->
+    <div class="panelLiga shadow">
+      <div class="espacioLogoLiga">
+        <img src="assets/league_logo_50.png" alt="Logo de Liga">
+      </div>
+      <div class="espacioNombreLiga">
+        <span>Liga Andrei Ivan Plotnikoff Cuevas</span>
+      </div>
+      <div class="espacioBotonVerde">
+        <a href="/matches/42/groups_admin">
+          <div class="botonVerde">
+            <span>Editar Fechas</span>
           </div>
-          <div class="lineaDivisoriaTitulo"></div>
-        </div> <!-- Cierra class secciones -->
+          <div class="iconoVerde">
+            <i class="zmdi zmdi-plus-circle"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- FIN DE PANEL DE INFO LIGA -->
 
         <!-- JORNADA 1 -->
-        <div class="equipos-grupo shadow secciones">
+        <div class="seccionLigateca shadow">
 
-          <div class="equipos-tituloGrupo container">
-            <div class="espacioTituloSeccion">
-              <span><strong>Eliminatorias</strong></span>
+          <div class="tituloSeccionLigateca">
+            <div class="textoTituloSeccion">
+              <span>Eliminatorias</span>
             </div>
 
-            <div class="inputInfoFieldSelect">
+            <div class="inputInfoFieldSelect dropdownCal">
               <select name="user[country_id]" id="user_country_id">
                 <option value="1">Fase de Grupos</option>
                 <option value="2">Eliminatorias</option>
@@ -149,7 +152,7 @@
             </div>
           </div>
 
-          <div class="lineaDivisoria"></div>
+          <div class="lineaDivisoriaAzul"></div>
 
           <!-- RONDA DE 64 -->
           <div class="espacioTituloGrupo">
@@ -720,9 +723,9 @@
 
 
 
-    </div><!-- Cierra class containerBody -->
 
-  </div><!-- Cierra class bodyContainer -->
+
+  </div><!-- Cierra class espacioGeneral -->
 
 <div class="footerGeneral">
     <div class="footerTxt">
