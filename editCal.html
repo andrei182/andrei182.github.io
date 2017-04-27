@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ligateca</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" media="all" href="assets/applicationinicio.css" data-turbolinks-track="true" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,300,100,900' rel='stylesheet' type='text/css'>
+  <script src="assets/applicationinicio.js" data-turbolinks-track="true"></script>
+  <script src="https://use.fontawesome.com/3e6dfd3a40.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+  <meta name="csrf-param" content="authenticity_token" />
+  <meta name="csrf-token" content="lijbUvI3wLc8iY2EY/uUuP563gu+GLq1A0FtGnf2k+/g20v1V7GgNEca2v27TZbdc0LDfK6EtadV2848szn6YA==" />
+  <link rel="stylesheet" href="assets/normalize.css">
+  <link rel="stylesheet" href="assets/barrasNav.css">
+  <link rel="stylesheet" href="assets/usoGeneral.css">
+  <link rel="stylesheet" href="assets/editCal.css">
+</head>
+
+<body>
+
+  <nav class="menuLigatecaPrincipal">
+    <div class="contenidoMenuLigateca">
+
+      <div class="logoMenuLigateca">
+        <a href="#">
+          <img src="assets/ligateca_logo_naranja.svg" alt="Ligateca logo naranja" />
+        </a>
+      </div>
+
+      <div class="linksMenuLigateca">
+        <a href="#"><span>Mis Ligas</span></a>
+        <a href="#"><span>Crear Liga</span></a>
+      </div>
+
+      <div class="buscadorMenuLigateca">
+        <input type="text" class="formularioBuscadorMenuLigateca" placeholder="Buscar... ">
+        <a href="#">
+          <div class="botonLupaMenuLigateca">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </div>
+        </a>
+      </div>
+
+      <div class="iconosMenuLigateca">
+        <a href="#"><i class="zmdi zmdi-notifications"></i></a>
+        <a href="#" data-toggle="dropdown"><i class="zmdi zmdi-account-circle"></i></a>
+        <ul class="dropdown-menu dropdownProfileIcon">
+          <li><a href="#">Perfil</a></li>
+          <li><a href="#">Cambiar Contraseña</a></li>
+          <li><a href="#">Salir</a></li>
+        </ul>
+      </div>
+
+      <div class="barrasMenuLigateca" data-toggle="collapse" href="#menuPrincipalAbierto">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </div>
+
+    </div>
+  </nav>
+  <div id="menuPrincipalAbierto" class="panel-collapse collapse">
+    <div class="menuPrincipalVertical">
+      <a href="#"><div class="menuPrincipalVerticalDiv"><span>Mis Ligas</span></div></a>
+      <a href="#"><div class="menuPrincipalVerticalDiv"><span class="azulClaro">Crear Liga</span></div></a>
+      <a href="#"><i class="zmdi zmdi-notifications"></i></a>
+      <a href="#"><div data-toggle="collapse" href="#menuProfileIcon"><i class="zmdi zmdi-account-circle azulClaro"></i></div></a>
+      <div id="menuProfileIcon" class="panel-collapse collapse">
+        <a href="#"><div><span>Perfil</span></div></a>
+        <a href="#"><div><span>Cambiar Contraseña</span></div></a>
+        <a href="#"><div><span>Salir</span></div></a>
+      </div>
+      <div class="lineaBuscadorVertical">
+        <input type="text" class="formularioBuscadorVertical" placeholder="Buscar... ">
+        <a href="#">
+          <div class="botonLupaMenuLigatecaVertical">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="espacioGeneral">
+
+    <!-- PANEL DE INFO LIGA -->
+    <div class="panelLiga shadow">
+      <div class="espacioLogoLiga">
+        <img src="assets/league_logo_50.png" alt="Logo de Liga">
+      </div>
+      <div class="espacioNombreLiga">
+        <span>Liga Andrei Ivan Plotnikoff Cuevas</span>
+      </div>
+    </div>
+    <!-- FIN DE PANEL DE INFO LIGA -->
+
+    <!-- PANEL INSTRUCCIONES Y RESET -->
+    <div class="panelLiga panelEditCalBotones">
+      <div class="espacioBotonGeneral botonCalEspecial">
+        <a href="#" class="pad5">
+          <div class="botonGeneral botonReset">
+            <span>Restablecer Calendario</span>
+          </div>
+        </a>
+        <a href="#">
+          <div class="botonGeneral botonCalVerde">
+            <span>Guardar Cambios</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- FIN DE PANEL INSTRUCCIONES Y RESET -->
+
+    <!-- JORNADA 1 -->
+    <div class="seccionLigateca shadow">
+      <div class="tituloSeccionLigateca">
+
+        <div class="textoTituloSeccion">
+          <span>Jornada 1</span>
+        </div>
+
+
+      </div>
+      <div class="lineaDivisoriaAzul"></div>
+
+      <div class="cuerpoEditJornada">
+
+        <!-- GRUPO A -->
+        <div class="lineaEditCalGrupo">
+          <span>Grupo A</span>
+        </div>
+
+        <!-- PARTIDO 1 -->
+        <div class="lineaEditCalPartido">
+          <div class="eCalPartidoEquipos">
+            <div class="eCalEquipo">
+              <select>
+                <option value="1">Maccabi Delevanta</option>
+                <option value="2">Inmortales United</option>
+                <option value="3">Deportivo Alhueso</option>
+                <option value="4">FK Rubin Roman</option>
+              </select>
+            </div>
+            <div class="eCalVersus"><span>vs</span></div>
+            <div class="eCalEquipo">
+              <select>
+                <option value="1">Deportivo Alhueso</option>
+                <option value="2">Inmortales United</option>
+                <option value="3">FK Rubin Roman</option>
+                <option value="4">Maccabi Delevanta</option>
+              </select>
+            </div>
+          </div>
+          <div class="eCalPartidoInfo">
+            <div class="eCalFecha">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <span>Escoger fecha</span>
+            </div>
+            <div class="eCalHora">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              <span>Escoger hora</span>
+            </div>
+          </div>
+          <div class="eCalPartidoBorrar">
+            <a href="#">
+              <div class="iconoBorrarGeneral">
+                <i class="zmdi zmdi-close-circle"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- FIN PARTIDO 1 -->
+
+        <!-- PARTIDO 2 -->
+        <div class="lineaEditCalPartido">
+          <div class="eCalPartidoEquipos">
+            <div class="eCalEquipo">
+              <select>
+                <option value="1">FK Rubin Roman</option>
+                <option value="2">Inmortales United</option>
+                <option value="3">Deportivo Alhueso</option>
+                <option value="4">Maccabi Delevanta</option>
+              </select>
+            </div>
+            <div class="eCalVersus"><span>vs</span></div>
+            <div class="eCalEquipo">
+              <select>
+                <option value="1">Inmortales United</option>
+                <option value="2">FK Rubin Roman</option>
+                <option value="3">Deportivo Alhueso</option>
+                <option value="4">Maccabi Delevanta</option>
+              </select>
+            </div>
+          </div>
+          <div class="eCalPartidoInfo">
+            <div class="eCalFecha">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <span>18-jul-2017</span>
+            </div>
+            <div class="eCalHora">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              <span>10:30 pm</span>
+            </div>
+          </div>
+          <div class="eCalPartidoBorrar">
+            <a href="#">
+              <div class="iconoBorrarGeneral">
+                <i class="zmdi zmdi-close-circle"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- FIN PARTIDO 2 -->
+
+        <!-- AGREGAR PARTIDO -->
+        <div class="espacioBotonGeneral pad5">
+          <a href="#">
+            <div class="botonGeneral">
+              <span>Agregar Partido</span>
+            </div>
+          </a>
+        </div>
+        <!-- FIN AGREGAR PARTIDO -->
+        <!-- FIN GRUPO A -->
+
+        <!-- GRUPO B -->
+        <div class="lineaEditCalGrupo">
+          <span>Grupo B</span>
+        </div>
+
+        <!-- PARTIDO 1 -->
+        <div class="lineaEditCalPartido">
+          <div class="eCalPartidoEquipos">
+            <div class="eCalEquipo">
+              <select>
+                <option value="1">La moda de Invierno F.C.</option>
+                <option value="2">Dangers Boys</option>
+                <option value="3">AC Kalor</option>
+                <option value="4">Muñecos Bravos</option>
+              </select>
+            </div>
+            <div class="eCalVersus"><span>vs</span></div>
+            <div class="eCalEquipo">
+              <select>
+                <option value="1">Dangers Boys</option>
+                <option value="2">La moda de Invierno F.C.</option>
+                <option value="3">AC Kalor</option>
+                <option value="4">Muñecos Bravos</option>
+              </select>
+            </div>
+          </div>
+          <div class="eCalPartidoInfo">
+            <div class="eCalFecha">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <span>Escoger fecha</span>
+            </div>
+            <div class="eCalHora">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              <span>Escoger hora</span>
+            </div>
+          </div>
+          <div class="eCalPartidoBorrar">
+            <a href="#">
+              <div class="iconoBorrarGeneral">
+                <i class="zmdi zmdi-close-circle"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- FIN PARTIDO 1 -->
+
+        <!-- PARTIDO 2 -->
+        <div class="lineaEditCalPartido">
+          <div class="eCalPartidoEquipos">
+            <div class="eCalEquipo">
+              <select>
+                <option value="1">AC Kalor</option>
+                <option value="2">Dangers Boys</option>
+                <option value="3">La moda de Invierno F.C.</option>
+                <option value="4">Muñecos Bravos</option>
+              </select>
+            </div>
+            <div class="eCalVersus"><span>vs</span></div>
+            <div class="eCalEquipo">
+              <select>
+                <option value="1">Muñecos Bravos</option>
+                <option value="2">Dangers Boys</option>
+                <option value="3">La moda de Invierno F.C.</option>
+                <option value="4">AC Kalor</option>
+              </select>
+            </div>
+          </div>
+          <div class="eCalPartidoInfo">
+            <div class="eCalFecha">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <span>Escoger Fecha</span>
+            </div>
+            <div class="eCalHora">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              <span>Escoger Hora</span>
+            </div>
+          </div>
+          <div class="eCalPartidoBorrar">
+            <a href="#">
+              <div class="iconoBorrarGeneral">
+                <i class="zmdi zmdi-close-circle"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- FIN PARTIDO 2 -->
+
+        <!-- AGREGAR PARTIDO -->
+        <div class="espacioBotonGeneral pad5">
+          <a href="#">
+            <div class="botonGeneral">
+              <span>Agregar Partido</span>
+            </div>
+          </a>
+        </div>
+        <!-- FIN AGREGAR PARTIDO -->
+        <!-- FIN GRUPO B -->
+
+        <!-- GRUPO C -->
+        <div class="lineaEditCalGrupo">
+          <span>Grupo C</span>
+        </div>
+        <!-- AGREGAR PARTIDO -->
+        <div class="espacioBotonGeneral pad5">
+          <a href="#">
+            <div class="botonGeneral">
+              <span>Agregar Partido</span>
+            </div>
+          </a>
+        </div>
+        <!-- FIN AGREGAR PARTIDO -->
+
+        <!-- FIN GRUPO C -->
+      </div>
+      <!-- FIN cuerpoEditJornada -->
+
+    </div>
+    <!-- FIN JORNADA 1 -->
+
+
+
+    <!-- JORNADA 2 -->
+    <div class="seccionLigateca shadow">
+      <div class="tituloSeccionLigateca">
+
+        <div class="textoTituloSeccion">
+          <span>Jornada 2</span>
+        </div>
+
+
+      </div>
+      <div class="lineaDivisoriaAzul"></div>
+
+      <div class="cuerpoEditJornada">
+
+        <!-- PARTIDO 1 -->
+        <div class="lineaEditCalPartido">
+          <div class="eCalPartidoEquipos">
+            <div class="eCalEquipo">
+              <select>
+                <option value="1">Maccabi Delevanta</option>
+                <option value="2">Inmortales United</option>
+                <option value="3">Deportivo Alhueso</option>
+                <option value="4">FK Rubin Roman</option>
+              </select>
+            </div>
+            <div class="eCalVersus"><span>vs</span></div>
+            <div class="eCalEquipo">
+              <select>
+                <option value="1">Deportivo Alhueso</option>
+                <option value="2">Inmortales United</option>
+                <option value="3">FK Rubin Roman</option>
+                <option value="4">Maccabi Delevanta</option>
+              </select>
+            </div>
+          </div>
+          <div class="eCalPartidoInfo">
+            <div class="eCalFecha">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <span>Escoger fecha</span>
+            </div>
+            <div class="eCalHora">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              <span>Escoger hora</span>
+            </div>
+          </div>
+          <div class="eCalPartidoBorrar">
+            <a href="#">
+              <div class="iconoBorrarGeneral">
+                <i class="zmdi zmdi-close-circle"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- FIN PARTIDO 1 -->
+
+        <!-- PARTIDO 2 -->
+        <div class="lineaEditCalPartido">
+          <div class="eCalPartidoEquipos">
+            <div class="eCalEquipo">
+              <select>
+                <option value="1">FK Rubin Roman</option>
+                <option value="2">Inmortales United</option>
+                <option value="3">Deportivo Alhueso</option>
+                <option value="4">Maccabi Delevanta</option>
+              </select>
+            </div>
+            <div class="eCalVersus"><span>vs</span></div>
+            <div class="eCalEquipo">
+              <select>
+                <option value="1">Inmortales United</option>
+                <option value="2">FK Rubin Roman</option>
+                <option value="3">Deportivo Alhueso</option>
+                <option value="4">Maccabi Delevanta</option>
+              </select>
+            </div>
+          </div>
+          <div class="eCalPartidoInfo">
+            <div class="eCalFecha">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <span>18-jul-2017</span>
+            </div>
+            <div class="eCalHora">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              <span>10:30 pm</span>
+            </div>
+          </div>
+          <div class="eCalPartidoBorrar">
+            <a href="#">
+              <div class="iconoBorrarGeneral">
+                <i class="zmdi zmdi-close-circle"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- FIN PARTIDO 2 -->
+
+        <!-- PARTIDO 3 -->
+        <div class="lineaEditCalPartido">
+          <div class="eCalPartidoEquipos">
+            <div class="eCalEquipo">
+              <select>
+                <option value="1">La moda de Invierno F.C.</option>
+                <option value="2">Dangers Boys</option>
+                <option value="3">AC Kalor</option>
+                <option value="4">Muñecos Bravos</option>
+              </select>
+            </div>
+            <div class="eCalVersus"><span>vs</span></div>
+            <div class="eCalEquipo">
+              <select>
+                <option value="1">Dangers Boys</option>
+                <option value="2">La moda de Invierno F.C.</option>
+                <option value="3">AC Kalor</option>
+                <option value="4">Muñecos Bravos</option>
+              </select>
+            </div>
+          </div>
+          <div class="eCalPartidoInfo">
+            <div class="eCalFecha">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <span>Escoger fecha</span>
+            </div>
+            <div class="eCalHora">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              <span>Escoger hora</span>
+            </div>
+          </div>
+          <div class="eCalPartidoBorrar">
+            <a href="#">
+              <div class="iconoBorrarGeneral">
+                <i class="zmdi zmdi-close-circle"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- FIN PARTIDO 3 -->
+
+        <!-- PARTIDO 4 -->
+        <div class="lineaEditCalPartido">
+          <div class="eCalPartidoEquipos">
+            <div class="eCalEquipo">
+              <select>
+                <option value="1">AC Kalor</option>
+                <option value="2">Dangers Boys</option>
+                <option value="3">La moda de Invierno F.C.</option>
+                <option value="4">Muñecos Bravos</option>
+              </select>
+            </div>
+            <div class="eCalVersus"><span>vs</span></div>
+            <div class="eCalEquipo">
+              <select>
+                <option value="1">Muñecos Bravos</option>
+                <option value="2">Dangers Boys</option>
+                <option value="3">La moda de Invierno F.C.</option>
+                <option value="4">AC Kalor</option>
+              </select>
+            </div>
+          </div>
+          <div class="eCalPartidoInfo">
+            <div class="eCalFecha">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <span>Escoger Fecha</span>
+            </div>
+            <div class="eCalHora">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              <span>Escoger Hora</span>
+            </div>
+          </div>
+          <div class="eCalPartidoBorrar">
+            <a href="#">
+              <div class="iconoBorrarGeneral">
+                <i class="zmdi zmdi-close-circle"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- FIN PARTIDO 4 -->
+
+        <!-- AGREGAR PARTIDO -->
+        <div class="espacioBotonGeneral pad5">
+          <a href="#">
+            <div class="botonGeneral">
+              <span>Agregar Partido</span>
+            </div>
+          </a>
+        </div>
+        <!-- FIN AGREGAR PARTIDO -->
+
+      </div>
+      <!-- FIN cuerpoEditJornada -->
+
+    </div>
+    <!-- FIN JORNADA 2 -->
+
+    <!-- AGREGAR JORNADA -->
+    <div class="panelLiga shadow">
+      <div class="espacioBotonGeneral">
+        <a href="#">
+          <div class="botonGeneral">
+            <span>Agregar Jornada</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- FIN AGREGAR JORNADA -->
+
+    <!-- GUARDAR CAMBIOS -->
+    <div class="panelLiga panelEditCalBotones">
+      <div class="espacioBotonGeneral">
+        <a href="#">
+          <div class="botonGeneral">
+            <span>Guardar Cambios</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- FIN GUARDAR CAMBIOS -->
+
+  </div><!-- FIN espacioGeneral -->
+
+
+</body>
+</html>
