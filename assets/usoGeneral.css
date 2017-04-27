@@ -144,6 +144,14 @@
     display: none;
 }
 
+.iconoBorrarGeneral {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b74250;
+}
+
 .colorNaranja {
     background-color: #e08045;
 }

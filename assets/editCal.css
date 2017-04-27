@@ -1,0 +1,210 @@
+.panelEditCalBotones {
+    background-color: transparent;
+}
+
+.cuerpoEditJornada {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: white;
+}
+
+.lineaEditCalGrupo {
+    width: 100%;
+    background-color: #DDDDDD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    height: 30px;
+
+}
+
+.lineaEditCalPartido {
+    width: 100%;
+    height: auto;
+    padding: 5px 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.eCalPartidoEquipos {
+    width: calc(100% - 140px);
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 5px;
+}
+
+
+.eCalPartidoInfo {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 5px;
+}
+
+.eCalPartidoBorrar {
+    width: 40px;
+    min-width: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eCalPartidoBorrar a,
+.eCalPartidoBorrar a:hover {
+    text-decoration: none;
+}
+
+.eCalEquipo {
+    width: 100%;
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+    height: 30px;
+    background-color: white;
+}
+
+.eCalEquipo select {
+   background: rgba(0, 0, 0, 0.005);
+   border: none;
+   font-size: 10px;
+   height: 28px;
+   width: 100%;
+   color: #cccccc;
+   -moz-appearance: none;
+   border-radius: 5px;
+}
+
+.eCalVersus {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cccccc;
+}
+
+.eCalFecha {
+    height: 30px;
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 20px;
+    color: #585858;
+}
+
+.eCalFecha span {
+    font-size: 10px;
+    padding-left: 5px;
+}
+
+.eCalHora {
+    height: 30px;
+    margin-top: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 20px;
+    color: #585858;
+}
+
+.eCalHora span {
+    font-size: 10px;
+    padding-left: 5px;
+}
+
+.pad5 {
+    padding: 5px;
+}
+
+.botonCalEspecial {
+    padding: 0;
+    justify-content: space-around;
+}
+
+.botonReset {
+    background-color: #df7e41;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.botonCalVerde {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.iconosElim {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: orange;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+
+@media screen and (min-width: 414px) {
+
+    .eCalPartidoEquipos {
+        flex-flow: row;
+        align-items: center;
+        justify-content: flex-start;
+        width: calc(100% - 210px);
+    }
+
+    .eCalPartidoInfo {
+        flex-flow: row;
+        align-items: center;
+        justify-content: flex-start;
+        width: 170px;
+        min-width: 170px;
+    }
+
+    .eCalVersus {
+        width: 20px;
+        min-width: 20px;
+    }
+
+    .eCalFecha {
+        width: 50%;
+        margin: 0;
+    }
+
+    .eCalHora {
+        width: 50%;
+        padding-left: 5px;
+        margin: 0;
+    }
+
+    .botonReset,
+    .botonCalVerde {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+
+    .botonCalEspecial {
+        justify-content: space-between;
+    }
+
+}
