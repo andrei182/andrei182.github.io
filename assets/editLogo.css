@@ -1,0 +1,94 @@
+
+.cuerpoEditLogo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5px;
+}
+
+
+.lineaEditLogo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.textoEditLogo {
+    font-size: 12px;
+    color: #787878;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.espacioModLogo {
+    margin-left: 10px;
+    height: 30px;
+}
+
+.espacioModLogo a,
+.espacioModLogo a:hover {
+    text-decoration: none;
+}
+
+.botonModLogo {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.botonModLogo span {
+    background-color: #df7e41;
+    border-radius: 3px;
+    padding: 5px 12px;
+    color: white;
+}
+
+
+.guardarEditLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.guardarEditLogo a {
+    text-decoration: none;
+}
+
+.guardarEditLogo a:hover {
+    text-decoration: none;
+}
+
+.botonVerdeGeneral {
+    background-color: #58b957;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px 12px;
+    border-radius: 3px;
+}
+
+.espacioLogoEditLogo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.espacioLogoEditLogo img {
+    max-width: 200px;
+    max-height: 200px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

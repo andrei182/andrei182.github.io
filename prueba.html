@@ -1,0 +1,107 @@
+<head>
+<title>Ligateca</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Latest compiled and minified CSS -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style type="text/css" media="screen">
+body{
+background-color: #ffffff;
+border: 0;
+margin: 0;
+font-size:14px;
+font-weight:bold;
+}
+.navbar-default {
+background-color: #2f4858;
+}
+.main_menu{
+background-color: #2f4858 !important;
+width: 800px;
+height: 53.2px;
+border-radius: 0px;
+display: block;
+left:0px;
+}
+
+#main_menu_main_links{
+display: inline-table;
+/border: 1px solid;/
+}
+
+.main_menu_bar{
+width: 800px;
+margin-left: 5px;
+}
+
+.league_accept_button{
+border: 1px solid;
+background-color: green;
+color:white;
+font-family: "Roboto";
+}
+.league_accept_button:hover{
+border: 1px solid;
+background-color: green;
+color:white;
+font-family: "Roboto";
+}
+
+.league_decline_button{
+border: 1px solid;
+background-color: red;
+color:white;
+font-family: "Roboto";
+margin-left: 10px;
+}
+
+.league_decline_button:hover{
+border: 1px solid;
+background-color: red;
+color:white;
+font-family: "Roboto";
+}
+
+#top{
+margin-left: 0px;
+padding-left: 0px
+}
+
+#main{
+margin-top: 30px;
+margin-left: 40px;
+min-height: 400px;
+}
+</style>
+</head>
+
+<body>
+<div id='top'>
+<nav class="main_menu">
+<div>
+<div class="main_menu_bar">
+<a class="navbar-brand main_logo_app" href="www.ligateca.com">
+<img src="http://ligateca.com/assets/ligateca_logo_naranja.svg" alt="Ligateca"></a>
+</div>
+<div id="main_menu_main_links">
+</div>
+</div>
+</nav>
+</div>
+<div id='main'>
+<%= yield %>
+</div>
+</body>
+<footer>
+</footer>
